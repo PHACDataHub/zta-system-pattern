@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: helloworld
+  name: helloworld
+  namespace: helloworld
+spec:
+  ports:
+  - name: tcp-3000
+    port: 3000
+    protocol: TCP
+    targetPort: 3000
+  selector:
+    app: helloworld
+  type: ClusterIP
+status:
+  loadBalancer: {}
