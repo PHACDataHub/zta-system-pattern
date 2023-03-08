@@ -1,0 +1,11 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+- asm-controlplane-configmap.yaml
+- asm-controlplane-revision.yaml
+- istio-ingressgateway-deployment.yaml
+- istio-ingressgateway-sds-role-binding.yaml
+- istio-ingressgateway-sds-role.yaml
+- istio-ingressgateway-service.yaml
+- istio-ingress-namespace.yaml
+- public-gateway.yaml
