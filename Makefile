@@ -8,7 +8,7 @@ name := zta-system-pattern
 ipname := zta-system-pattern-ip
 region := northamerica-northeast1
 release_channel := regular
-english_domain := ztapattern.alpha.canada.ca
+subdomain := ztapattern
 project_number != gcloud projects describe "$(project)" --format="csv[no-heading,separator=' '](projectNumber)"
 
 .PHONY: apply
@@ -17,6 +17,7 @@ apply:
 
 .PHONY: enabled
 enabled:
+		gcloud services enable dns.googleapis.com --project="$(project)"
 		gcloud services enable anthos.googleapis.com --project="$(project)"
 		gcloud services enable meshca.googleapis.com --project="$(project)"
 		gcloud services enable mesh.googleapis.com --project="$(project)"
@@ -41,6 +42,16 @@ fleet:
 		gcloud container clusters update  --project "$(project)" "$(name)" --region "$(region)" --update-labels "mesh_id=proj-$(project_number)"
 		gcloud container fleet mesh update --management automatic --memberships "$(name)" --project "$(project)"
 
+# Install anthos service mesh aka: asm
+.PHONY: asm
+asm:
+		asmcli install --project_id "$(project)" --fleet_id "$(project)" --cluster_name "$(name)" --cluster_location "$(region)" --output_dir asm --enable_all --ca mesh_ca --managed --use-managed-cni
+
+# Install anthos service mesh aka: asm
+.PHONY: print-asm
+print-asm:
+		asmcli print-config --project_id "$(project)" --fleet_id "$(project)" --cluster_name "$(name)" --cluster_location "$(region)" --output_dir asm --enable_all --ca mesh_ca --managed --use-managed-cni
+
 # This lets us watch the fleet config to see if our cluster is set up correctly. See:
 # https://cloud.google.com/service-mesh/docs/managed/provision-managed-anthos-service-mesh#verify_the_control_plane_has_been_provisioned
 .PHONY: watch-mesh
@@ -49,17 +60,16 @@ watch-mesh:
 
 # XXX: Commands below here are are work in progress.
 
-# TODO: test this and get it working without a hardcoded zone name
 # TODO: get dnssec working
 # https://www.canada.ca/en/government/system/digital-government/policies-standards/enterprise-it-service-common-configurations/dns.html#cha2
 .PHONY: dns
 dns:
 		ip=gcloud compute addresses describe --region $(region) $(ipname) --format='value(address)'
 		gcloud services enable dns.googleapis.com
-		gcloud dns --project="$(project)" managed-zones create $(name) --description="" --dns-name="$(english_domain)." --visibility="public" --dnssec-state="off"
-		gcloud dns --project="$(project)" record-sets create "$(english_domain)." --zone="actually-works" --type="CAA" --ttl="300" --rrdatas="0 issue "letsencrypt.org""
+		gcloud dns --project="$(project)" managed-zones create $(subdomain) --description="" --dns-name="$(subdomain).alpha.canada.ca." --visibility="public" --dnssec-state="off"
+		gcloud dns --project="$(project)" record-sets create "$(subdomain).alpha.canada.ca." --zone="$(subdomain)" --type="CAA" --ttl="300" --rrdatas="0 issue "letsencrypt.org""
 		gcloud compute addresses create $(ipname) --project="$(project)" --region="$(region)"
-		gcloud dns --project="$(project)" record-sets create "$(english_domain)." --zone="actually-works" --type="A" --ttl="300" --rrdatas="$(ip)"
+		gcloud dns --project="$(project)" record-sets create "$(subdomain).alpha.canada.ca." --zone="$(subdomain)" --type="A" --ttl="300" --rrdatas="$(ip)"
 
 # TODO: reduce priviledges below dns admin
 .PHONY: dns-solver-service-account
