@@ -10,6 +10,7 @@ region := northamerica-northeast1
 release_channel := regular
 subdomain := ztapattern
 project_number != gcloud projects describe "$(project)" --format="csv[no-heading,separator=' '](projectNumber)"
+ip != gcloud compute addresses describe --region $(region) $(ipname) --format='value(address)'
 
 .PHONY: apply
 apply:
@@ -17,6 +18,7 @@ apply:
 
 .PHONY: enabled
 enabled:
+		gcloud services enable artifactregistry.googleapis.com --project="$(project)"
 		gcloud services enable dns.googleapis.com --project="$(project)"
 		gcloud services enable anthos.googleapis.com --project="$(project)"
 		gcloud services enable meshca.googleapis.com --project="$(project)"
@@ -64,19 +66,23 @@ watch-mesh:
 # https://www.canada.ca/en/government/system/digital-government/policies-standards/enterprise-it-service-common-configurations/dns.html#cha2
 .PHONY: dns
 dns:
-		ip=gcloud compute addresses describe --region $(region) $(ipname) --format='value(address)'
 		gcloud services enable dns.googleapis.com
 		gcloud dns --project="$(project)" managed-zones create $(subdomain) --description="" --dns-name="$(subdomain).alpha.canada.ca." --visibility="public" --dnssec-state="off"
 		gcloud dns --project="$(project)" record-sets create "$(subdomain).alpha.canada.ca." --zone="$(subdomain)" --type="CAA" --ttl="300" --rrdatas="0 issue "letsencrypt.org""
-		gcloud compute addresses create $(ipname) --project="$(project)" --region="$(region)"
 		gcloud dns --project="$(project)" record-sets create "$(subdomain).alpha.canada.ca." --zone="$(subdomain)" --type="A" --ttl="300" --rrdatas="$(ip)"
 
 # TODO: reduce priviledges below dns admin
+# Should only require these dns.resourceRecordSets.*, dns.changes.* and dns.managedZones.list
 .PHONY: dns-solver-service-account
 dns-solver-service-account:
 		gcloud iam service-accounts create dns01-solver --display-name "dns01-solver"
 		gcloud projects add-iam-policy-binding "$(project)" --member "serviceAccount:dns01-solver@$(project).iam.gserviceaccount.com" --role roles/dns.admin
 		gcloud iam service-accounts add-iam-policy-binding --role roles/iam.workloadIdentityUser --member "serviceAccount:$(project).svc.id.goog[cert-manager/cert-manager]" dns01-solver@$(project).iam.gserviceaccount.com
+
+.ONESHELL:
+.PHONY: certmanager
+certmanager:
+		kustomize build certmanager | kubectl apply -f -
 
 # Seed the cluster with deployment keys so that flux can write back to the GitHub repository.
 # TODO: Need to set up encryption keys for secrets too: https://fluxcd.io/flux/guides/mozilla-sops/

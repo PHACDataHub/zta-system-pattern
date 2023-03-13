@@ -40,4 +40,13 @@ make asm
 # Install our "hello world" example app and the config for Istio
 # (N.B.: update kustomization.yaml to add the ip you created earlier)
 make apply
+
+# Stretch goal! DNS + Certs from Let's encrypt!
+# Create zones. Assumes delegation of an alpha.canada.ca subdomain
+# See: https://github.com/cds-snc/dns/pull/314/files
+make dns
+# create workload identity accounts needed to complete DNS-01 challenge
+make dns-solver-service-account
+# install certmanager (uses the accounts and completes the challenge)
+make certmanager
 ```
