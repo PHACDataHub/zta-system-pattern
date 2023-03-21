@@ -39,6 +39,7 @@ cluster:
 # https://cloud.google.com/service-mesh/docs/managed/provision-managed-anthos-service-mesh
 .PHONY: fleet
 fleet:
+		gcloud container fleet mesh enable --project "$(project)"
 		gcloud container fleet memberships register "$(name)" --gke-uri=https://container.googleapis.com/v1/projects/"$(project)"/locations/"$(region)"/clusters/"$(name)" --enable-workload-identity --project "$(project)"
 		gcloud projects add-iam-policy-binding "$(project)" --member "serviceAccount:service-$(project_number)@gcp-sa-servicemesh.iam.gserviceaccount.com" --role roles/anthosservicemesh.serviceAgent
 		gcloud container clusters update  --project "$(project)" "$(name)" --region "$(region)" --update-labels "mesh_id=proj-$(project_number)"
