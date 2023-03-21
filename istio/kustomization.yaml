@@ -9,3 +9,4 @@ resources:
 - istio-ingressgateway-service.yaml
 - istio-ingress-namespace.yaml
 - public-gateway.yaml
+- peerauthentication.yaml
