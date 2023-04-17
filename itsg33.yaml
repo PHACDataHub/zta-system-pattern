@@ -1027,7 +1027,7 @@ class: Technical
 title: Security-Relevant Information
 definition: 'The information system prevents access to [Assignment: organization-defined
   security-relevant information] except during secure, non-operable system states.'
-additionalGuidance: 'Security-relevant information is any information within information
+additionalGuidance: Security-relevant information is any information within information
   systems that can potentially impact the operation of security functions or the provision
   of security services in a manner that could result in failure to enforce system
   security policies or maintain the isolation of code and data. Security-relevant
@@ -1035,8 +1035,7 @@ additionalGuidance: 'Security-relevant information is any information within inf
   key management information, configuration parameters for security services, and
   access control lists. Secure, non-operable system states include the times in which
   information systems are not performing mission/business-related processing (e.g.,
-  the system is off-line for maintenance, troubleshooting, boot-up, shut down). Related
-  control: CM-3.'
+  the system is off-line for maintenance, troubleshooting, boot-up, shut down).
 relatedControls:
   - CM-3
 parametersThatMustBeDefined: Security-relevant information
@@ -1356,7 +1355,7 @@ definition: 'The information system uses [Assignment: organization-defined secur
   attributes] associated with [Assignment: organization-defined information, source,
   and destination objects] to enforce [Assignment: organization-defined information
   flow control policies] as a basis for flow control decisions.'
-additionalGuidance: 'Information flow enforcement mechanisms compare security attributes
+additionalGuidance: Information flow enforcement mechanisms compare security attributes
   associated with information (data content and data structure) and source/destination
   objects, and respond appropriately (e.g., block, quarantine, alert administrator)
   when the mechanisms encounter information flows not explicitly allowed by information
@@ -1366,7 +1365,6 @@ additionalGuidance: 'Information flow enforcement mechanisms compare security at
   Security attributes can also include, for example, source and destination addresses
   employed in traffic filter firewalls. Flow enforcement using explicit security attributes
   can be used, for example, to control the release of certain types of information.
-  Related control: AC-16.'
 relatedControls:
   - AC-16
 parametersThatMustBeDefined: "Security attributes  \n\nInformation, source, and destination\
@@ -1452,12 +1450,12 @@ class: Technical
 title: Dynamic Information Flow Control
 definition: 'The information system enforces dynamic information flow control based
   on [Assignment: organization-defined policies].'
-additionalGuidance: 'Organizational policies regarding dynamic information flow control
+additionalGuidance: Organizational policies regarding dynamic information flow control
   include, for example, allowing or disallowing information flows based on changing
   conditions or mission/operational considerations. Changing conditions include, for
   example, changes in organizational risk tolerance due to changes in the immediacy
   of mission/business needs, changes in the threat environment, and detection of potentially
-  harmful or adverse events. Related control: SI-4.'
+  harmful or adverse events.
 relatedControls:
   - SI-4
 parametersThatMustBeDefined: Policies
@@ -1993,9 +1991,8 @@ definition: 'The information system, when transferring information between diffe
   security domains, examines the information for the presence of [Assignment: organized-defined
   unsanctioned information] and prohibits the transfer of such information in accordance
   with the [Assignment: organization-defined security policy].'
-additionalGuidance: 'Detection of unsanctioned information includes, for example,
-  checking all information to be transferred for malicious code and dirty words. Related
-  control: SI-3.'
+additionalGuidance: Detection of unsanctioned information includes, for example, checking
+  all information to be transferred for malicious code and dirty words.
 relatedControls:
   - SI-3
 parametersThatMustBeDefined: 'Unsanctioned information
@@ -2465,13 +2462,13 @@ definition: 'The organization requires that users of information system accounts
   or roles, with access to [Assignment: organization-defined security functions or
   security-relevant information], use non-privileged accounts or roles, when accessing
   non-security functions.'
-additionalGuidance: 'This control enhancement limits an information system’s exposure
+additionalGuidance: This control enhancement limits an information system’s exposure
   to threats when users are operating from within privileged accounts or roles. The
   inclusion of roles addresses situations where organizations implement access control
   policies such as RBAC and where a change of role provides the same degree of assurance
   in the change of access authorizations for both the user and all processes acting
   on behalf of the user as would be provided by a change between a privileged and
-  non-privileged account. Related control: PL-4.'
+  non-privileged account.
 relatedControls:
   - PL-4
 parametersThatMustBeDefined: Functions or security-relevant information
@@ -2512,9 +2509,8 @@ definition: 'The organization authorizes network access to [Assignment: organiza
   privileged commands] only for [Assignment: organization-defined compelling operational
   needs] and documents the rationale for such access in the operations security plan
   for the information system.'
-additionalGuidance: 'Network access is any access across a network connection in lieu
-  of local access (i.e., user being physically present at the device). Related control:
-  AC-17.'
+additionalGuidance: Network access is any access across a network connection in lieu
+  of local access (i.e., user being physically present at the device).
 relatedControls:
   - AC-17
 parametersThatMustBeDefined: 'Privileged commands
@@ -2603,15 +2599,14 @@ class: Technical
 title: Privileged Accounts
 definition: 'The organization restricts privileged accounts on the information system
   to [Assignment: organization-defined personnel or roles].'
-additionalGuidance: 'Privileged accounts, including super user accounts, are typically
+additionalGuidance: Privileged accounts, including super user accounts, are typically
   described as system administrators for various types of commercial off-the-shelf
   operating systems. Restricting privileged accounts to specific personnel or roles
   prevents day-to-day users from having access to privileged information/functions.
   Organizations may differentiate in the application of this control enhancement between
   allowed privileges for local accounts and for domain accounts provided organizations
   retain the ability to control information system configurations for key security
-  parameters and as otherwise necessary to sufficiently mitigate risk. Related control:
-  CM-6.'
+  parameters and as otherwise necessary to sufficiently mitigate risk.
 relatedControls:
   - CM-6
 parametersThatMustBeDefined: Personnel or roles
@@ -2691,12 +2686,12 @@ definition: "The organization: \n(a)Reviews [Assignment: organization-defined fr
   \ of users] to validate the need for such privileges; and\n(b)Reassigns or removes\
   \ privileges, if necessary, to correctly reflect organizational mission/business\
   \ needs."
-additionalGuidance: 'The need for certain assigned user privileges may change over
+additionalGuidance: The need for certain assigned user privileges may change over
   time reflecting changes in organizational missions/business function, environments
   of operation, technologies, or threat. Periodic review of assigned user privileges
   is necessary to determine if the rationale for assigning such privileges remains
   valid. If the need cannot be revalidated, organizations take appropriate corrective
-  actions. Related control: CA-7.'
+  actions.
 relatedControls:
   - CA-7
 parametersThatMustBeDefined: (a) Frequency
@@ -2776,12 +2771,12 @@ family: AC
 class: Technical
 title: Auditing Use of Privileged Functions
 definition: The information system audits the execution of privileged functions.
-additionalGuidance: 'Misuse of privileged functions, either intentionally or unintentionally
+additionalGuidance: Misuse of privileged functions, either intentionally or unintentionally
   by authorized users, or by unauthorized external entities that have compromised
   information system accounts, is a serious and ongoing concern and can have significant
   adverse impacts on organizations. Auditing the use of privileged functions is one
   way to detect such misuse, and in doing so, help mitigate the risk from insider
-  threats and the advanced persistent threat (APT). Related control: AU-2.'
+  threats and the advanced persistent threat (APT).
 relatedControls:
   - AU-2
 parametersThatMustBeDefined: None
@@ -3304,14 +3299,13 @@ definition: '(A)The information system prevents further access to the system by 
 
   (B)The information system retains the session lock until the user re-establishes
   access using established identification and authentication procedures.'
-additionalGuidance: 'Session locks are temporary actions taken when users stop work
+additionalGuidance: Session locks are temporary actions taken when users stop work
   and move away from the immediate vicinity of information systems but do not want
   to log out because of the temporary nature of their absences. Session locks are
   implemented where session activities can be determined. This is typically at the
   operating system level, but can also be at the application level. Session locks
   are not an acceptable substitute for logging out of information systems, for example,
-  if organizations require users to log out at the end of workdays. Related control:
-  AC-7'
+  if organizations require users to log out at the end of workdays.
 relatedControls:
   - AC-7
 parametersThatMustBeDefined: (A) Time period
@@ -3659,12 +3653,12 @@ title: Dynamic Attribute Association
 definition: 'The information system dynamically associates security attributes with
   [Assignment: organization-defined subjects and objects] in accordance with [Assignment:
   organization-defined security policies] as information is created and combined.'
-additionalGuidance: 'Dynamic association of security attributes is appropriate whenever
+additionalGuidance: Dynamic association of security attributes is appropriate whenever
   the security characteristics of information changes over time. Security attributes
   may change, for example, due to information aggregation issues (i.e., the security
   characteristics of individual information elements are different from the combined
   elements), changes in individual access authorizations (i.e., privileges), and changes
-  in the security category of information. Related control: AC-4.'
+  in the security category of information.
 relatedControls:
   - AC-4
 parametersThatMustBeDefined: 'Subjects and objects
@@ -4283,10 +4277,9 @@ class: Technical
 title: Managed Access Control Points
 definition: 'The information system routes all remote accesses through [Assignment:
   organization-defined number] managed network access control points.'
-additionalGuidance: 'Limiting the number of access control points for remote accesses
+additionalGuidance: Limiting the number of access control points for remote accesses
   reduces the attack surface for organizations. Organizations consider the Trusted
   Internet Connections (TIC) initiative requirements for external network connections.
-  Related control: SC-7.'
 relatedControls:
   - SC-7
 parametersThatMustBeDefined: Number
@@ -4329,7 +4322,7 @@ definition: '(a)The organization authorizes the execution of privileged commands
 
   (b)The organization documents the rationale for such access in the security plan
   for the information system.'
-additionalGuidance: 'Related control: AC-6.'
+additionalGuidance: ''
 relatedControls:
   - AC-6
 parametersThatMustBeDefined: (a) Needs
@@ -4368,7 +4361,7 @@ class: Technical
 title: Protection of Information
 definition: The organization ensures that users protect information about remote access
   mechanisms from unauthorized use and disclosure.
-additionalGuidance: 'Related controls: AT-2, AT-3, PS-6.'
+additionalGuidance: ''
 relatedControls:
   - AT-2
   - AT-3
@@ -4548,7 +4541,7 @@ class: Technical
 title: Authentication and Encryption
 definition: 'The information system protects wireless access to the system using authentication
   of [Selection (one or more): users; devices] and encryption.'
-additionalGuidance: 'Related controls: SC-8, SC-13.'
+additionalGuidance: ''
 relatedControls:
   - SC-8
   - SC-13
@@ -4589,7 +4582,7 @@ title: Disable Wireless Networking
 definition: The organization disables, when not intended for use, wireless networking
   capabilities internally embedded within information system components prior to issuance
   and deployment.
-additionalGuidance: 'Related control: AC-19.'
+additionalGuidance: ''
 relatedControls:
   - AC-19
 parametersThatMustBeDefined: None
@@ -4680,7 +4673,7 @@ additionalGuidance: 'Actions that may be taken by organizations to limit unautho
   reduce the likelihood that unintended receivers will be able to intercept signals.
   Prior to taking such actions, organizations can conduct periodic wireless surveys
   to understand the radio frequency profile of organizational information systems
-  as well as other systems that may be operating in the area. Related control: PE-19.'
+  as well as other systems that may be operating in the area.'
 relatedControls:
   - PE-19
 parametersThatMustBeDefined: None
@@ -4829,7 +4822,7 @@ definition: '(a)The organization prohibits the use of unclassified mobile device
 
   -Restricts the connection of classified mobile devices to classified information
   systems in accordance with [Assignment: organization-defined security policies].'
-additionalGuidance: 'Related controls: CA-6, IR-4.'
+additionalGuidance: ''
 relatedControls:
   - CA-6
   - IR-4
@@ -5058,7 +5051,7 @@ definition: 'The organization permits authorized individuals to use an external 
 
   (b)Retains approved information system connection or processing agreements with
   the organizational entity hosting the external information system.'
-additionalGuidance: 'This control enhancement recognizes that there are circumstances
+additionalGuidance: This control enhancement recognizes that there are circumstances
   where individuals using external information systems (e.g., contractors, coalition
   partners) need to access organizational information systems. In those situations,
   organizations need confidence that the external information systems contain the
@@ -5066,7 +5059,7 @@ additionalGuidance: 'This control enhancement recognizes that there are circumst
   damage, or otherwise harm organizational information systems. Verification that
   the required security controls have been implemented can be achieved, for example,
   by third-party, independent assessments, attestations, or other means, depending
-  on the confidence level required by organizations. Related control: CA-2.'
+  on the confidence level required by organizations.
 relatedControls:
   - CA-2
 parametersThatMustBeDefined: None
@@ -5244,14 +5237,13 @@ definition: '(A)The organization facilitates information sharing by enabling aut
   (B)The organization employs [Assignment: organization-defined automated mechanisms
   or manual processes] to assist users in making information sharing/collaboration
   decisions.'
-additionalGuidance: 'This control applies to information that may be restricted in
+additionalGuidance: This control applies to information that may be restricted in
   some manner (e.g., privileged medical information, contract-sensitive information,
   proprietary information, personally identifiable information, classified information
   related to special access programs or compartments) based on some formal or administrative
   determination. Depending on the particular information-sharing circumstances, sharing
   partners may be defined at the individual, group, or organizational level. Information
   may be defined by content, type, security category, or special access program/compartment.
-  Related control: AC-3'
 relatedControls:
   - AC-3
 parametersThatMustBeDefined: '(A) Information sharing circumstances where user discretion
@@ -6866,14 +6858,13 @@ definition: 'The information system invokes a [Selection: full system shutdown; 
   system shutdown; degraded operational mode with limited mission/business functionality
   available] in the event of [Assignment: organization-defined audit failures], unless
   an alternate audit capability exists.'
-additionalGuidance: 'Organizations determine the types of audit failures that can
-  trigger automatic information system shutdowns or degraded operations. Because of
-  the importance of ensuring mission/business continuity, organizations may determine
-  that the nature of the audit failure is not so severe that it warrants a complete
-  shutdown of the information system supporting the core organizational missions/business
-  operations. In those instances, partial information system shutdowns or operating
-  in a degraded mode with reduced capability may be viable alternatives. Related control:
-  AU-15.'
+additionalGuidance: Organizations determine the types of audit failures that can trigger
+  automatic information system shutdowns or degraded operations. Because of the importance
+  of ensuring mission/business continuity, organizations may determine that the nature
+  of the audit failure is not so severe that it warrants a complete shutdown of the
+  information system supporting the core organizational missions/business operations.
+  In those instances, partial information system shutdowns or operating in a degraded
+  mode with reduced capability may be viable alternatives.
 relatedControls:
   - AU-15
 parametersThatMustBeDefined: 'Selection: full system shutdown; partial system shutdown;
@@ -7004,9 +6995,9 @@ title: Process Integration
 definition: The organization employs automated mechanisms to integrate audit review,
   analysis, and reporting processes to support organizational processes for investigation
   and response to suspicious activities.
-additionalGuidance: 'Organizational processes benefiting from integrated audit review,
+additionalGuidance: Organizational processes benefiting from integrated audit review,
   analysis, and reporting include, for example, incident response, continuous monitoring,
-  contingency planning, and Inspector General Audits. Related control: AU-12.'
+  contingency planning, and Inspector General Audits.
 relatedControls:
   - AU-12
 parametersThatMustBeDefined: None
@@ -7329,7 +7320,7 @@ class: Technical
 title: Correlation with Information from Non-Technical Sources
 definition: The organization correlates information from nontechnical sources with
   audit information to enhance organization-wide situational awareness.
-additionalGuidance: 'Nontechnical sources include, for example, human resources records
+additionalGuidance: Nontechnical sources include, for example, human resources records
   documenting organizational policy violations (e.g., sexual harassment incidents,
   improper use of organizational information assets). Such information can lead organizations
   to a more directed analytical effort to detect potential malicious insider activity.
@@ -7339,7 +7330,7 @@ additionalGuidance: 'Nontechnical sources include, for example, human resources 
   a need to know. Thus, correlation of information from nontechnical sources with
   audit information generally occurs only when individuals are suspected of being
   involved in a security incident. Organizations obtain legal advice prior to initiating
-  such actions. Related control: AT-2.'
+  such actions.
 relatedControls:
   - AT-2
 parametersThatMustBeDefined: None
@@ -7423,7 +7414,7 @@ definition: '(A)The information system provides an audit reduction and report ge
 
   (B)The information system provides an audit reduction and report generation capability
   that does not alter the original content or time ordering of audit records.'
-additionalGuidance: 'Audit reduction is a process that manipulates collected audit
+additionalGuidance: Audit reduction is a process that manipulates collected audit
   information and organizes such information in a summary format that is more meaningful
   to analysts. Audit reduction and report generation capabilities do not always emanate
   from the same information system or from the same organizational entities conducting
@@ -7431,8 +7422,7 @@ additionalGuidance: 'Audit reduction is a process that manipulates collected aud
   data mining techniques with advanced data filters to identify anomalous behaviour
   in audit records. The report generation capability provided by the information system
   can generate customizable reports. Time ordering of audit records can be a significant
-  issue if the granularity of the timestamp in the record is insufficient. Related
-  control: AU-6'
+  issue if the granularity of the timestamp in the record is insufficient.
 relatedControls:
   - AU-6
 parametersThatMustBeDefined: None
@@ -7888,12 +7878,12 @@ class: Technical
 title: Access by Subset of Privileged Users
 definition: 'The organization authorizes access to management of audit functionality
   to only [Assignment: organization-defined subset of privileged users].'
-additionalGuidance: 'Individuals with privileged access to an information system and
+additionalGuidance: Individuals with privileged access to an information system and
   who are also the subject of an audit by that system, may affect the reliability
   of audit information by inhibiting audit activities or modifying audit records.
   This control enhancement requires that privileged access be further defined between
   audit-related privileges and other privileges, thus limiting the users with audit-related
-  privileges. Related control: AC-5.'
+  privileges.
 relatedControls:
   - AC-5
 parametersThatMustBeDefined: Subset of privileged users
@@ -8513,13 +8503,13 @@ definition: 'The information system provides the capability for [Assignment: org
   individuals or roles] to change the auditing to be performed on [Assignment: organization-defined
   information system components] based on [Assignment: organization-defined selectable
   event criteria] within [Assignment: organization-defined time thresholds].'
-additionalGuidance: 'This control enhancement enables organizations to extend or limit
+additionalGuidance: This control enhancement enables organizations to extend or limit
   auditing as necessary to meet organizational requirements. Auditing that is limited
   to conserve information system resources may be extended to address certain threat
   situations. In addition, auditing may be limited to a specific set of events to
   facilitate audit reduction, analysis, and reporting. Organizations can establish
   time thresholds in which audit actions are changed, for example, near real-time,
-  within minutes, or within hours. Related control: AU-7'
+  within minutes, or within hours.
 relatedControls:
   - AU-7
 parametersThatMustBeDefined: 'Information system components
@@ -8847,11 +8837,10 @@ title: Alternate Audit Capability
 definition: '(A) The organization provides an alternate audit capability in the event
   of a failure in primary audit capability that provides [Assignment: organization-defined
   alternate audit functionality].'
-additionalGuidance: 'Since an alternate audit capability may be a short-term protection
+additionalGuidance: Since an alternate audit capability may be a short-term protection
   employed until the failure in the primary auditing capability is corrected, organizations
   may determine that the alternate audit capability need only provide a subset of
-  the primary audit functionality that is impacted by the failure. Related control:
-  AU-5.'
+  the primary audit functionality that is impacted by the failure.
 relatedControls:
   - AU-5
 parametersThatMustBeDefined: (A) Alternate audit functionality
@@ -8891,7 +8880,7 @@ title: Cross-Organizational Auditing
 definition: '(A) The organization employs [Assignment: organization-defined methods]
   for coordinating [Assignment: organization-defined audit information] among external
   organizations when audit information is transmitted across organizational boundaries.'
-additionalGuidance: 'When organizations use information systems and/or services of
+additionalGuidance: When organizations use information systems and/or services of
   external organizations, the auditing capability necessitates a coordinated approach
   across organizations. For example, maintaining the identity of individuals that
   requested particular services across organizational boundaries may often be very
@@ -8900,7 +8889,6 @@ additionalGuidance: 'When organizations use information systems and/or services 
   of auditing capability provided by service-oriented architectures) simply captures
   the identity of individuals issuing requests at the initial information system,
   and subsequent systems record that the requests emanated from authorized individuals.
-  Related control: AU-6.'
 relatedControls:
   - AU-6
 parametersThatMustBeDefined: '(A) Methods
@@ -9635,7 +9623,7 @@ additionalGuidance: 'Organizations can constrain information system connectivity
   such connectivity: (i) allow-all, deny by exception, also known as blacklisting
   (the weaker of the two policies); or (ii) deny-all, allow by exception, also known
   as whitelisting (the stronger of the two policies). For either policy, organizations
-  determine what exceptions, if any, are acceptable. Related control: CM-7.'
+  determine what exceptions, if any, are acceptable.'
 relatedControls:
   - CM-7
 parametersThatMustBeDefined: "Selection: allow-all; deny-by-exception; deny-all; permit-by-exception\
@@ -10048,7 +10036,7 @@ additionalGuidance: 'Penetration testing is a specialized type of assessment con
   correlate the penetration testing rules of engagement with the tools, techniques,
   and procedures that are anticipated to be employed by adversaries carrying out attacks.
   Organizational risk assessments guide decisions on the level of independence required
-  for personnel conducting penetration testing. Related control: SA-12'
+  for personnel conducting penetration testing.'
 relatedControls:
   - SA-12
 parametersThatMustBeDefined: '(A) Frequency
@@ -10092,13 +10080,13 @@ definition: 'INDEPENDENT PENETRATION AGENT OR TEAM
 
   The organization employs an independent penetration agent or penetration team to
   perform penetration testing on the information system or system components.'
-additionalGuidance: 'Independent penetration agents or teams are individuals or groups
+additionalGuidance: Independent penetration agents or teams are individuals or groups
   who conduct impartial penetration testing of organizational information systems.
   Impartiality implies that penetration agents or teams are free from any perceived
   or actual conflicts of interest with regard to the development, operation, or management
   of the information systems that are the targets of the penetration testing. Supplemental
   guidance for CA-2 (x) provides additional information regarding independent assessments
-  that can be applied to penetration testing. Related control: CA-2.'
+  that can be applied to penetration testing.
 relatedControls:
   - CA-2
   - CA-2
@@ -10420,7 +10408,7 @@ definition: 'The organization reviews and updates the baseline configuration of 
   (b)When required due to [Assignment organization-defined circumstances]; and
 
   (c)As an integral part of information system component installations and upgrades.'
-additionalGuidance: 'Related control: CM-5.'
+additionalGuidance: ''
 relatedControls:
   - CM-5
 parametersThatMustBeDefined: '(a) Frequency
@@ -10990,12 +10978,11 @@ class: Operational
 title: Cryptography Management
 definition: 'The organization ensures that cryptographic mechanisms used to provide
   [Assignment: organization-defined security safeguards] are under configuration management.'
-additionalGuidance: 'Regardless of the cryptographic means employed (e.g., public
-  key, private key, shared secrets), organizations ensure that there are processes
-  and procedures in place to effectively manage those means. For example, if devices
-  use certificates as a basis for identification and authentication, there needs to
-  be a process in place to address the expiration of those certificates. Related control:
-  SC-13.'
+additionalGuidance: Regardless of the cryptographic means employed (e.g., public key,
+  private key, shared secrets), organizations ensure that there are processes and
+  procedures in place to effectively manage those means. For example, if devices use
+  certificates as a basis for identification and authentication, there needs to be
+  a process in place to address the expiration of those certificates.
 relatedControls:
   - SC-13
 parametersThatMustBeDefined: Security safeguards
@@ -11142,8 +11129,8 @@ definition: The organization, after the information system is changed, checks th
   security functions to verify that the functions are implemented correctly, operating
   as intended, and producing the desired outcome with regard to meeting the security
   control requirements for the system.
-additionalGuidance: 'Implementation is this context refers to installing changed code
-  in the operational information system. Related control: SA-1x.'
+additionalGuidance: Implementation is this context refers to installing changed code
+  in the operational information system.
 relatedControls:
   - SA-1x
 parametersThatMustBeDefined: None
@@ -11236,7 +11223,7 @@ class: Operational
 title: Automated Access Enforcement / Auditing
 definition: The information system enforces access restrictions and supports auditing
   of the enforcement actions.
-additionalGuidance: 'Related controls: AU-2, AU-12, AU-6, CM-3, and CM-6.'
+additionalGuidance: ''
 relatedControls:
   - AU-2
   - AU-12
@@ -11425,13 +11412,12 @@ definition: '(a)The organization limits privileges to change information system 
 
   (b)The organization reviews and re-evaluates privileges [Assignment: organization-defined
   frequency].'
-additionalGuidance: 'In many organizations, information systems support multiple core
+additionalGuidance: In many organizations, information systems support multiple core
   missions/business functions. Limiting privileges to change information system components
   with respect to operational systems is necessary because changes to a particular
   information system component may have far-reaching effects on mission/business processes
   supported by the system where the component resides. The complex, many-to-many relationships
   between systems and mission/business processes are in some cases, unknown to developers.
-  Related control: AC-2.'
 relatedControls:
   - AC-2
 parametersThatMustBeDefined: (b) Frequency
@@ -11594,7 +11580,7 @@ title: Automated Central Management / Application / Verification
 definition: 'The organization employs automated mechanisms to centrally manage, apply,
   and verify configuration settings for [Assignment: organization-defined information
   system components].'
-additionalGuidance: 'Related controls: CA-7, CM-4.'
+additionalGuidance: ''
 relatedControls:
   - CA-7
   - CM-4
@@ -11799,7 +11785,7 @@ definition: 'The information system prevents program execution in accordance wit
   [Selection (one or more): [Assignment: organization-defined policies regarding software
   program usage and restrictions]; rules authorizing the terms and conditions of software
   program usage].'
-additionalGuidance: 'Related control: CM-8.'
+additionalGuidance: ''
 relatedControls:
   - CM-8
 parametersThatMustBeDefined: 'Selection (one or more): [Assignment: organization-defined
@@ -12104,13 +12090,13 @@ class: Operational
 title: Automated Maintenance
 definition: The organization employs automated mechanisms to help maintain an up-to-date,
   complete, accurate, and readily available inventory of information system components.
-additionalGuidance: 'Organizations maintain information system inventories to the
-  extent feasible. Virtual machines, for example, can be difficult to monitor because
-  such machines are not visible to the network when not in use. In such cases, organizations
+additionalGuidance: Organizations maintain information system inventories to the extent
+  feasible. Virtual machines, for example, can be difficult to monitor because such
+  machines are not visible to the network when not in use. In such cases, organizations
   maintain as up-to-date, complete, and accurate an inventory as is deemed reasonable.
   This control enhancement can be satisfied by the implementation of CM-2 (2) for
   organizations that choose to combine information system component inventory and
-  baseline configuration activities. Related control: SI-7.'
+  baseline configuration activities.
 relatedControls:
   - CM-2
   - SI-7
@@ -12429,10 +12415,9 @@ title: Assignment of Components to Systems
 definition: "(a)The organization assigns [Assignment: organization-defined acquired\
   \ information system components] to an information system; and \n(b)The organization\
   \ receives an acknowledgement from the information system owner of this assignment."
-additionalGuidance: 'Organizations determine the criteria for or types of information
+additionalGuidance: Organizations determine the criteria for or types of information
   system components (e.g., microprocessors, motherboards, software, programmable logic
   controllers, and network devices) that are subject to this control enhancement.
-  Related control: SA-4.'
 relatedControls:
   - SA-4
 parametersThatMustBeDefined: (a) Acquired information system components
@@ -12751,7 +12736,7 @@ class: Operational
 title: Alerts for Unauthorized Installations
 definition: 'The information system alerts [Assignment: organization-defined personnel
   or roles] when the unauthorized installation of software is detected.'
-additionalGuidance: 'Related controls: CA-7, SI-4.'
+additionalGuidance: ''
 relatedControls:
   - CA-7
   - SI-4
@@ -12791,8 +12776,8 @@ class: Operational
 title: Prohibit Installation without Privileged Status
 definition: The information system prohibits user installation of software without
   explicit privileged status.
-additionalGuidance: 'Privileged status can be obtained, for example, by serving in
-  the role of system administrator. Related control: AC-6.'
+additionalGuidance: Privileged status can be obtained, for example, by serving in
+  the role of system administrator.
 relatedControls:
   - AC-6
 parametersThatMustBeDefined: None
@@ -13084,12 +13069,11 @@ title: Resume Essential Missions / Business Functions
 definition: 'The organization plans for the resumption of essential missions and business
   functions within [Assignment: organization-defined time period] of contingency plan
   activation.'
-additionalGuidance: 'Organizations may choose to carry out the contingency planning
+additionalGuidance: Organizations may choose to carry out the contingency planning
   activities in this control enhancement as part of organizational business continuity
   planning including, for example, as part of business impact analyses. The time period
   for resumption of essential missions/business functions may be dependent on the
   severity/extent of disruptions to the information system and its supporting infrastructure.
-  Related control: PE-12.'
 relatedControls:
   - PE-12
 parametersThatMustBeDefined: Time period
@@ -13129,12 +13113,11 @@ title: Resume All Missions / Business Functions
 definition: 'The organization plans for the resumption of all missions and business
   functions within [Assignment: organization-defined time period] of contingency plan
   activation.'
-additionalGuidance: 'Organizations may choose to carry out the contingency planning
+additionalGuidance: Organizations may choose to carry out the contingency planning
   activities in this control enhancement as part of organizational business continuity
   planning including, for example, as part of business impact analyses. The time period
   for resumption of all missions/business functions may be dependent on the severity/extent
-  of disruptions to the information system and its supporting infrastructure. Related
-  control: PE-12.'
+  of disruptions to the information system and its supporting infrastructure.
 relatedControls:
   - PE-12
 parametersThatMustBeDefined: Time period
@@ -13174,12 +13157,12 @@ title: Continue Essential Missions / Business Functions
 definition: The organization plans for the continuance of essential missions and business
   functions with little or no loss of operational continuity and sustains that continuity
   until full information system restoration at primary processing and/or storage sites.
-additionalGuidance: 'Organizations may choose to carry out the contingency planning
+additionalGuidance: Organizations may choose to carry out the contingency planning
   activities in this control enhancement as part of organizational business continuity
   planning including, for example, as part of business impact analyses. Primary processing
   and/or storage sites defined by organizations as part of contingency planning may
   change depending on the circumstances associated with the contingency (e.g., backup
-  sites may become primary sites). Related control: PE-12.'
+  sites may become primary sites).
 relatedControls:
   - PE-12
 parametersThatMustBeDefined: None
@@ -13220,12 +13203,12 @@ definition: The organization plans for the transfer of essential missions and bu
   functions to alternate processing and/or storage sites with little or no loss of
   operational continuity and sustains that continuity through information system restoration
   to primary processing and/or storage sites.
-additionalGuidance: 'Organizations may choose to carry out the contingency planning
+additionalGuidance: Organizations may choose to carry out the contingency planning
   activities in this control enhancement as part of organizational business continuity
   planning including, for example, as part of business impact analyses. Primary processing
   and/or storage sites defined by organizations as part of contingency planning may
   change depending on the circumstances associated with the contingency (e.g., backup
-  sites may become primary sites). Related control: PE-12.'
+  sites may become primary sites).
 relatedControls:
   - PE-12
 parametersThatMustBeDefined: None
@@ -13265,12 +13248,12 @@ title: Coordinate with External Service Providers
 definition: The organization coordinates its contingency plan with the contingency
   plans of external service providers to ensure that contingency requirements can
   be satisfied.
-additionalGuidance: 'When the capability of an organization to successfully carry
-  out its core missions/business functions is dependent on external service providers,
+additionalGuidance: When the capability of an organization to successfully carry out
+  its core missions/business functions is dependent on external service providers,
   developing a timely and comprehensive contingency plan may become more challenging.
   In this situation, organizations coordinate contingency planning activities with
   the external entities to ensure that the individual plans reflect the overall contingency
-  needs of the organization. Related control: SA-9.'
+  needs of the organization.
 relatedControls:
   - SA-9
 parametersThatMustBeDefined: None
@@ -13559,14 +13542,13 @@ class: Operational
 title: Coordinate with Related Plans
 definition: The organization coordinates contingency plan testing with organizational
   elements responsible for related plans.
-additionalGuidance: 'Plans related to contingency plans for organizational information
+additionalGuidance: Plans related to contingency plans for organizational information
   systems include, for example, Business Continuity Plans, Disaster Recovery Plans,
   Continuity of Operations Plans, Business Recovery Plans, Incident Response Plans,
   and Emergency Action Plans. This control enhancement does not require organizations
   to create organizational elements to handle related plans or to align such elements
   with specific plans. It does require, however, that if such organizational elements
   are responsible for related plans, organizations should coordinate with those elements.
-  Related control: IR-8.'
 relatedControls:
   - IR-8
 parametersThatMustBeDefined: None
@@ -13610,7 +13592,7 @@ definition: '(a)The organization tests the contingency plan at the alternate pro
   (b)The organization tests the contingency plan at the alternate processing site
   to evaluate the capabilities of the alternate processing site to support contingency
   operations.'
-additionalGuidance: 'Related control: CP-7.'
+additionalGuidance: ''
 relatedControls:
   - CP-7
 parametersThatMustBeDefined: None
@@ -13690,7 +13672,7 @@ class: Operational
 title: Full Recovery / Reconstitution
 definition: The organization includes a full recovery and reconstitution of the information
   system to a known state as part of contingency plan testing.
-additionalGuidance: 'Related controls: CP-10, SC-24.'
+additionalGuidance: ''
 relatedControls:
   - CP-10
   - SC-24
@@ -13784,13 +13766,13 @@ class: Operational
 title: Separation from Primary Site
 definition: The organization identifies an alternate storage site that is separated
   from the primary storage site to reduce susceptibility to the same threats.
-additionalGuidance: 'Threats that affect alternate storage sites are typically defined
+additionalGuidance: Threats that affect alternate storage sites are typically defined
   in organizational assessments of risk and include, for example, natural disasters,
   structural failures, hostile cyber-attacks, and errors of omission/commission. Organizations
   determine what is considered a sufficient degree of separation between primary and
   alternate storage sites based on the types of threats that are of concern. For one
   particular type of threat (i.e., hostile cyber-attack), the degree of separation
-  between sites is less relevant. Related control: RA-3.'
+  between sites is less relevant.
 relatedControls:
   - RA-3
 parametersThatMustBeDefined: None
@@ -13874,8 +13856,7 @@ additionalGuidance: 'Area-wide disruptions refer to those types of disruptions t
   Explicit mitigation actions include, for example: (i) duplicating backup information
   at other alternate storage sites if access problems occur at originally designated
   alternate sites; or (ii) planning for physical access to retrieve backup information
-  if electronic accessibility to the alternate site is disrupted. Related control:
-  RA-3.'
+  if electronic accessibility to the alternate site is disrupted.'
 relatedControls:
   - RA-3
 parametersThatMustBeDefined: None
@@ -13980,13 +13961,13 @@ class: Operational
 title: Separation from Primary Site
 definition: The organization identifies an alternate processing site that is separated
   from the primary processing site to reduce susceptibility to the same threats.
-additionalGuidance: 'Threats that affect alternate processing sites are typically
-  defined in organizational assessments of risk and include, for example, natural
-  disasters, structural failures, hostile cyber-attacks, and errors of omission/commission.
-  Organizations determine what is considered a sufficient degree of separation between
-  primary and alternate processing sites based on the types of threats that are of
-  concern. For one particular type of threat (i.e., hostile cyber-attack), the degree
-  of separation between sites is less relevant. Related control: RA-3.'
+additionalGuidance: Threats that affect alternate processing sites are typically defined
+  in organizational assessments of risk and include, for example, natural disasters,
+  structural failures, hostile cyber-attacks, and errors of omission/commission. Organizations
+  determine what is considered a sufficient degree of separation between primary and
+  alternate processing sites based on the types of threats that are of concern. For
+  one particular type of threat (i.e., hostile cyber-attack), the degree of separation
+  between sites is less relevant.
 relatedControls:
   - RA-3
 parametersThatMustBeDefined: None
@@ -14026,10 +14007,9 @@ title: Accessibility
 definition: The organization identifies potential accessibility problems to the alternate
   processing site in the event of an area-wide disruption or disaster and outlines
   explicit mitigation actions.
-additionalGuidance: 'Area-wide disruptions refer to those types of disruptions that
+additionalGuidance: Area-wide disruptions refer to those types of disruptions that
   are broad in geographic scope (e.g., hurricane, regional power outage) with such
   determinations made by organizations based on organizational assessments of risk.
-  Related control: RA-3.'
 relatedControls:
   - RA-3
 parametersThatMustBeDefined: None
@@ -14538,7 +14518,7 @@ class: Operational
 title: Testing for Reliability / Integrity
 definition: 'The organization tests backup information [Assignment: organization-defined
   frequency] to verify media reliability and information integrity.'
-additionalGuidance: 'Related control: CP-4.'
+additionalGuidance: ''
 relatedControls:
   - CP-4
 parametersThatMustBeDefined: Frequency
@@ -14577,7 +14557,7 @@ class: Operational
 title: Test Restoration using Sampling
 definition: The organization uses a sample of backup information in the restoration
   of selected information system functions as part of contingency plan testing.
-additionalGuidance: 'Related control: CP-4.'
+additionalGuidance: ''
 relatedControls:
   - CP-4
 parametersThatMustBeDefined: None
@@ -14705,7 +14685,7 @@ title: Redundant Secondary System
 definition: The organization accomplishes information system backup by maintaining
   a redundant secondary system that is not collocated with the primary system and
   that can be activated without loss of information or disruption to operations.
-additionalGuidance: 'Related controls: CP-7, CP-10.'
+additionalGuidance: ''
 relatedControls:
   - CP-7
   - CP-10
@@ -14891,9 +14871,8 @@ definition: 'The organization provides the capability to restore information sys
   components within [Assignment: organization-defined restoration time-periods] from
   configuration-controlled and integrity-protected information representing a known,
   operational state for the components.'
-additionalGuidance: 'Restoration of information system components includes, for example,
-  re-imaging which restores components to known, operational states. Related control:
-  CM-2.'
+additionalGuidance: Restoration of information system components includes, for example,
+  re-imaging which restores components to known, operational states.
 relatedControls:
   - CM-2
 parametersThatMustBeDefined: Restoration time periods
@@ -15074,7 +15053,7 @@ definition: '(A)The organization employs [Assignment: organization-defined alter
   or supplemental security mechanisms] for satisfying [Assignment: organization-defined
   security functions] when the primary means of implementing the security function
   is unavailable or compromised.'
-additionalGuidance: 'This control supports information system resiliency and contingency
+additionalGuidance: This control supports information system resiliency and contingency
   planning/continuity of operations. To ensure mission/business continuity, organizations
   can implement alternative or supplemental security mechanisms. These mechanisms
   may be less effective than the primary mechanisms (e.g., not as easy to use, not
@@ -15087,7 +15066,7 @@ additionalGuidance: 'This control supports information system resiliency and con
   by information systems, system components, or information system services. For example,
   an organization may issue to senior executives and system administrators one-time
   pads in case multifactor tokens, the organization’s standard means for secure remote
-  authentication, is compromised. Related control: CP-2'
+  authentication, is compromised.
 relatedControls:
   - CP-2
 parametersThatMustBeDefined: '(A) Alternative or supplemental security mechanisms
@@ -15277,7 +15256,7 @@ class: Technical
 title: Network Access to Privileged Accounts
 definition: The information system implements multifactor authentication for network
   access to privileged accounts.
-additionalGuidance: 'Related control: AC-6.'
+additionalGuidance: ''
 relatedControls:
   - AC-6
 parametersThatMustBeDefined: None
@@ -15354,7 +15333,7 @@ class: Technical
 title: Local Access to Privileged Accounts
 definition: The information system implements multifactor authentication for local
   access to privileged accounts.
-additionalGuidance: 'Related control: AC-6.'
+additionalGuidance: ''
 relatedControls:
   - AC-6
 parametersThatMustBeDefined: None
@@ -15473,7 +15452,7 @@ definition: 'The information system implements multifactor authentication for ne
   access to privileged accounts such that one of the factors is provided by a device
   separate from the system gaining access and the device meets [Assignment: organization-defined
   strength of mechanism requirements].'
-additionalGuidance: 'Related control: AC-6.'
+additionalGuidance: ''
 relatedControls:
   - AC-6
 parametersThatMustBeDefined: Strength of mechanism requirements
@@ -15679,13 +15658,13 @@ definition: 'The information system implements multifactor authentication for re
   access to privileged and non-privileged accounts such that one of the factors is
   provided by a device separate from the system being accessed and the device meets
   [Assignment: organization-defined strength of mechanism requirements].'
-additionalGuidance: 'For remote access to privileged/non-privileged accounts, the
-  purpose of requiring a device that is separate from the information system being
-  accessed as one of the factors during multifactor authentication is to reduce the
-  likelihood of compromising authentication credentials stored on the system. For
-  example, adversaries deploying malicious code on organizational information systems
-  can potentially compromise such credentials resident on the system and subsequently
-  impersonate authorized users. Related control: AC-6.'
+additionalGuidance: For remote access to privileged/non-privileged accounts, the purpose
+  of requiring a device that is separate from the information system being accessed
+  as one of the factors during multifactor authentication is to reduce the likelihood
+  of compromising authentication credentials stored on the system. For example, adversaries
+  deploying malicious code on organizational information systems can potentially compromise
+  such credentials resident on the system and subsequently impersonate authorized
+  users.
 relatedControls:
   - AC-6
 parametersThatMustBeDefined: Strength of mechanism requirements
@@ -16102,10 +16081,10 @@ class: Technical
 title: Prohibit Account Identifiers as Public Identifiers
 definition: The organization prohibits the use of information system account identifiers
   that are the same as public identifiers for individual electronic mail accounts.
-additionalGuidance: 'Prohibiting the use of information systems account identifiers
+additionalGuidance: Prohibiting the use of information systems account identifiers
   that are the same as some public identifier such as the individual identifier section
   of an electronic mail address, makes it more difficult for adversaries to guess
-  user identifiers on organizational information systems. Related control: AT-2.'
+  user identifiers on organizational information systems.
 relatedControls:
   - AT-2
 parametersThatMustBeDefined: None
@@ -16224,12 +16203,12 @@ title: Identify User Status
 definition: 'The organization manages individual identifiers by uniquely identifying
   each individual as [Assignment: organization-defined characteristic identifying
   individual status].'
-additionalGuidance: 'Characteristics identifying the status of individuals include,
+additionalGuidance: Characteristics identifying the status of individuals include,
   for example, contractors and foreign nationals. Identifying the status of individuals
   by specific characteristics provides additional information about the people with
   whom organizational personnel are communicating. For example, it might be useful
   for a government employee to know that one of the individuals on an email message
-  is a contractor. Related control: AT-2.'
+  is a contractor.
 relatedControls:
   - AT-2
 parametersThatMustBeDefined: Characteristic identifying individual status
@@ -16267,13 +16246,13 @@ family: IA
 class: Technical
 title: Dynamic Management
 definition: The information system dynamically manages identifiers.
-additionalGuidance: 'In contrast to conventional approaches to identification which
+additionalGuidance: In contrast to conventional approaches to identification which
   presume static accounts for pre-registered users, many distributed information systems
   including, for example, service-oriented architectures, rely on establishing identifiers
   at run time for entities that were previously unknown. In these situations, organizations
   anticipate and provision for the dynamic establishment of identifiers. Pre-established
   trust relationships and mechanisms with appropriate authorities to validate identities
-  and related credentials are essential. Related control: AC-16.'
+  and related credentials are essential.
 relatedControls:
   - AC-16
 parametersThatMustBeDefined: None
@@ -16520,7 +16499,7 @@ definition: '(a)The information system, for password-based authentication, enfor
 
   (f)The information system, for password-based authentication allows the use of a
   temporary password for system logons with an immediate change to a permanent password.'
-additionalGuidance: 'This control enhancement applies to single-factor authentication
+additionalGuidance: This control enhancement applies to single-factor authentication
   of individuals using passwords as individual or group authenticators, and in a similar
   manner, when passwords are part of multifactor authenticators. This control enhancement
   does not apply when passwords are used to unlock hardware authenticators (e.g.,
@@ -16531,7 +16510,7 @@ additionalGuidance: 'This control enhancement applies to single-factor authentic
   required with respect to the total number of positions in the current password.
   Password lifetime restrictions do not apply to temporary passwords. To mitigate
   certain brute force attacks against passwords, organizations may also consider salting
-  passwords. Related control: IA-6.'
+  passwords.
 relatedControls:
   - IA-6
 parametersThatMustBeDefined: '(a) Requirements for case sensitivity, number of characters,
@@ -16593,11 +16572,10 @@ definition: '(a)The information system, for PKI-based authentication, validates 
   (d)The information system, for PKI-based authentication, implements a local cache
   of revocation data to support path discovery and validation in case of inability
   to access revocation information via the network.'
-additionalGuidance: 'Status information for certification paths includes, for example,
+additionalGuidance: Status information for certification paths includes, for example,
   certificate revocation lists or certificate status protocol responses. For PIV cards,
   validation of certifications involves the construction and verification of a certification
   path to the Common Policy Root trust anchor including certificate policy processing.
-  Related control: IA-6.'
 relatedControls:
   - IA-6
 parametersThatMustBeDefined: None
@@ -17196,7 +17174,7 @@ title: Authenticator Feedback
 definition: (A)The information system obscures feedback of authentication information
   during the authentication process to protect the information from possible exploitation/use
   by unauthorized individuals.
-additionalGuidance: 'The feedback from information systems does not provide information
+additionalGuidance: The feedback from information systems does not provide information
   that would allow unauthorized individuals to compromise authentication mechanisms.
   For some types of information systems or system components, for example, desktops/notebooks
   with relatively large monitors, the threat (often referred to as shoulder surfing)
@@ -17206,8 +17184,7 @@ additionalGuidance: 'The feedback from information systems does not provide info
   to the small keyboards. Therefore, the means for obscuring the authenticator feedback
   is selected accordingly. Obscuring the feedback of authentication information includes,
   for example, displaying asterisks when users type passwords into input devices,
-  or displaying feedback for a very limited time before fully obscuring it. Related
-  control: PE-18'
+  or displaying feedback for a very limited time before fully obscuring it.
 relatedControls:
   - PE-18
 parametersThatMustBeDefined: None
@@ -17488,12 +17465,12 @@ title: Transmission of Decisions
 definition: 'The organization ensures that identification and authentication decisions
   are transmitted between [Assignment: organization-defined services] and are consistent
   with organizational policies.'
-additionalGuidance: 'For distributed architectures (e.g., service-oriented architectures),
+additionalGuidance: For distributed architectures (e.g., service-oriented architectures),
   the decisions regarding the validation of identification and authentication claims
   may be made by services separate from the services acting on those decisions. In
   such situations, it is necessary to provide the identification and authentication
   decisions (as opposed to the actual identifiers and authenticators) to the services
-  that need to act on those decisions. Related control: SC-8.'
+  that need to act on those decisions.
 relatedControls:
   - SC-8
 parametersThatMustBeDefined: Services
@@ -17593,7 +17570,7 @@ additionalGuidance: 'In addition to the re-authentication requirements associate
   devices in other situations including, for example: (i) when authenticators change;
   (ii), when roles change; (iii) when security categories of information systems change;
   (iv), when the execution of privileged functions occurs; (v) after a fixed period
-  of time; or (vi) periodically. Related control: AC-1x'
+  of time; or (vi) periodically.'
 relatedControls:
   - AC-1x
 parametersThatMustBeDefined: (A) Circumstances or situations requiring re-authentication
@@ -17892,8 +17869,7 @@ definition: The organization employs automated mechanisms to more thoroughly and
 additionalGuidance: 'Organizations use automated mechanisms to more thoroughly and
   effectively test incident response capabilities, for example: (i) by providing more
   complete coverage of incident response issues; (ii) by selecting more realistic
-  test scenarios and test environments; and (iii) by stressing the response capability.
-  Related control: AT-2.'
+  test scenarios and test environments; and (iii) by stressing the response capability.'
 relatedControls:
   - AT-2
 parametersThatMustBeDefined: None
@@ -18399,11 +18375,11 @@ class: Operational
 title: Dynamic Response Capability
 definition: 'The organization employs [Assignment: organization-defined dynamic response
   capabilities] to effectively respond to security incidents.'
-additionalGuidance: 'This control enhancement addresses the deployment of replacement
+additionalGuidance: This control enhancement addresses the deployment of replacement
   or new capabilities in a timely manner in response to security incidents (e.g.,
   adversary actions during hostile cyber-attacks). This includes capabilities implemented
   at the mission/business process level (e.g., activating alternative mission/business
-  processes) and at the information system level. Related control: CP-10.'
+  processes) and at the information system level.
 relatedControls:
   - CP-10
 parametersThatMustBeDefined: Dynamic response capabilities
@@ -18632,7 +18608,7 @@ class: Operational
 title: Automated Reporting
 definition: The organization employs automated mechanisms to assist in the reporting
   of security incidents.
-additionalGuidance: 'Related control: IR-7.'
+additionalGuidance: ''
 relatedControls:
   - IR-7
 parametersThatMustBeDefined: None
@@ -19416,7 +19392,7 @@ definition: '(a)The organization employs automated mechanisms to schedule, condu
 
   (b)The organization produces up-to date, accurate, and complete records of all maintenance
   and repair actions requested, scheduled, in process, and completed.'
-additionalGuidance: 'Related controls: CA-7, MA-3.'
+additionalGuidance: ''
 relatedControls:
   - CA-7
   - MA-3
@@ -19506,10 +19482,10 @@ class: Operational
 title: Inspect Tools
 definition: The organization inspects the maintenance tools carried into a facility
   by maintenance personnel for improper or unauthorized modifications.
-additionalGuidance: 'If, upon inspection of maintenance tools, organizations determine
+additionalGuidance: If, upon inspection of maintenance tools, organizations determine
   that the tools have been modified in an improper/unauthorized manner or contain
   malicious code, the incident is handled consistent with organizational policies
-  and procedures for incident handling. Related control: SI-7.'
+  and procedures for incident handling.
 relatedControls:
   - SI-7
 parametersThatMustBeDefined: None
@@ -19548,10 +19524,10 @@ class: Operational
 title: Inspect Media
 definition: The organization checks media containing diagnostic and test programs
   for malicious code before the media are used in the information system.
-additionalGuidance: 'If, upon inspection of media containing maintenance diagnostic
+additionalGuidance: If, upon inspection of media containing maintenance diagnostic
   and test programs, organizations determine that the media contain malicious code,
   the incident is handled consistent with organizational incident handling policies
-  and procedures. Related control: SI-3.'
+  and procedures.
 relatedControls:
   - SI-3
 parametersThatMustBeDefined: None
@@ -19760,7 +19736,7 @@ definition: '(a)The organization audits nonlocal maintenance and diagnostic sess
   [Assignment: organization-defined audit events]; and
 
   (b)The organization reviews the records of the maintenance and diagnostic sessions.'
-additionalGuidance: 'Related controls: AU-2, AU-6, AU-12.'
+additionalGuidance: ''
 relatedControls:
   - AU-2
   - AU-6
@@ -19906,7 +19882,7 @@ definition: '(a)The organization protects nonlocal maintenance sessions by emplo
   Additional requirement not in ITSG-33 catalogue:
 
   Terminates session and network connections when nonlocal maintenance is completed.'
-additionalGuidance: 'Related control: SC-13.'
+additionalGuidance: ''
 relatedControls:
   - SC-13
 parametersThatMustBeDefined: (a) Authenticators that are replay resistant
@@ -19992,7 +19968,7 @@ class: Operational
 title: Cryptographic Protection
 definition: The information system implements cryptographic mechanisms to protect
   the integrity and confidentiality of nonlocal maintenance and diagnostic communications.
-additionalGuidance: 'Related controls: SC-8, SC-13.'
+additionalGuidance: ''
 relatedControls:
   - SC-8
   - SC-13
@@ -20032,18 +20008,9 @@ class: Operational
 title: Remote Disconnect Verification
 definition: The information system implements remote disconnect verification at the
   termination of nonlocal maintenance and diagnostic sessions.
-additionalGuidance: 'Remote disconnect verification ensures that remote connections
+additionalGuidance: Remote disconnect verification ensures that remote connections
   from nonlocal maintenance sessions have been terminated and are no longer available
-  for use. Related control: SC-13. Non-local maintenance and diagnostic activities
-  are those activities conducted by individuals communicating through a network; either
-  an external network (e.g., the Internet) or an internal network. Local maintenance
-  and diagnostic activities are those activities carried out by individuals physically
-  present at the information system or information system component and not communicating
-  across a network connection. Identification and authentication techniques used in
-  the establishment of non-local maintenance and diagnostic sessions are consistent
-  with the network access requirements in IA-2. Strong authenticators include, for
-  example, PKI where certificates are stored on a token protected by a password, passphrase,
-  or biometric. Enforcing requirements in MA-4 is accomplished in part, by other controls.'
+  for use.
 relatedControls:
   - SC-13
   - IA-2
@@ -20225,7 +20192,7 @@ definition: The organization ensures that personnel performing maintenance and d
   information possess security clearances and formal access approvals for at least
   the highest classification level and for all compartments of information on the
   system.
-additionalGuidance: 'Related control: PS-3.'
+additionalGuidance: ''
 relatedControls:
   - PS-3
 parametersThatMustBeDefined: None
@@ -20265,7 +20232,7 @@ title: Citizenship Requirements for Classified Systems
 definition: The organization ensures that personnel performing maintenance and diagnostic
   activities on an information system processing, storing, or transmitting classified
   information are Canadian citizens.
-additionalGuidance: 'Related control: PS-3.'
+additionalGuidance: ''
 relatedControls:
   - PS-3
 parametersThatMustBeDefined: None
@@ -20311,7 +20278,7 @@ definition: '(a)The organization ensures that cleared foreign nationals (i.e., f
   (b)The organization ensures that approvals, consents, and detailed operational conditions
   regarding the use of foreign nationals to conduct maintenance and diagnostic activities
   on classified information systems are fully documented within Memoranda of Agreements.'
-additionalGuidance: 'Related control: PS-3.'
+additionalGuidance: ''
 relatedControls:
   - PS-3
 parametersThatMustBeDefined: None
@@ -21015,10 +20982,10 @@ title: Cryptographic Protection
 definition: The information system implements cryptographic mechanisms compliant with
   the requirements of Control SC-x3 to protect the confidentiality and integrity of
   information stored on digital media during transport outside of controlled areas.
-additionalGuidance: 'This control enhancement applies to both portable storage devices
+additionalGuidance: This control enhancement applies to both portable storage devices
   (e.g., USB memory sticks, compact disks, digital video disks, external/removable
   hard drives) and mobile devices with storage capability (e.g., smart phones, tablets,
-  E-readers). Related control: SC-13.'
+  E-readers).
 relatedControls:
   - SC-13
 parametersThatMustBeDefined: None
@@ -21125,14 +21092,14 @@ class: Operational
 title: Review / Approve / Track / Document / Verify
 definition: The organization reviews, approves, tracks, documents, and verifies media
   sanitization and disposal actions.
-additionalGuidance: 'Organizations review and approve media to be sanitized to ensure
+additionalGuidance: Organizations review and approve media to be sanitized to ensure
   compliance with records-retention policies. Tracking/documenting actions include,
   for example, listing personnel who reviewed and approved sanitization and disposal
   actions, types of media sanitized, specific files stored on the media, sanitization
   methods used, date and time of the sanitization actions, personnel who performed
   the sanitization, verification actions taken, personnel who performed the verification,
   and disposal action taken. Organizations verify that the sanitization of the media
-  was effective prior to disposal. Related control: SI-12.'
+  was effective prior to disposal.
 relatedControls:
   - SI-12
 parametersThatMustBeDefined: None
@@ -21214,18 +21181,17 @@ definition: 'The organization applies non-destructive sanitization techniques to
   storage devices prior to connecting such devices to the information system under
   the following circumstances: [Assignment: organization-defined circumstances requiring
   sanitization of portable storage devices].'
-additionalGuidance: 'This control enhancement applies to digital media containing
-  classified information and Protected Information. Portable storage devices can be
-  the source of malicious code insertions into organizational information systems.
-  Many of these devices are obtained from unknown and potentially untrustworthy sources
-  and may contain malicious code that can be readily transferred to information systems
-  through USB ports or other entry portals. While scanning such storage devices is
-  always recommended, sanitization provides additional assurance that the devices
-  are free of malicious code to include code capable of initiating zero-day attacks.
-  Organizations consider non-destructive sanitization of portable storage devices
-  when such devices are first purchased from the manufacturer or vendor prior to initial
-  use or when organizations lose a positive chain of custody for the devices. Related
-  control: SI-3.'
+additionalGuidance: This control enhancement applies to digital media containing classified
+  information and Protected Information. Portable storage devices can be the source
+  of malicious code insertions into organizational information systems. Many of these
+  devices are obtained from unknown and potentially untrustworthy sources and may
+  contain malicious code that can be readily transferred to information systems through
+  USB ports or other entry portals. While scanning such storage devices is always
+  recommended, sanitization provides additional assurance that the devices are free
+  of malicious code to include code capable of initiating zero-day attacks. Organizations
+  consider non-destructive sanitization of portable storage devices when such devices
+  are first purchased from the manufacturer or vendor prior to initial use or when
+  organizations lose a positive chain of custody for the devices.
 relatedControls:
   - SI-3
 parametersThatMustBeDefined: Circumstances requiring sanitization of portable storage
@@ -21431,11 +21397,10 @@ class: Operational
 title: Prohibit Use without Owner
 definition: The organization prohibits the use of portable storage devices in organizational
   information systems when such devices have no identifiable owner.
-additionalGuidance: 'Requiring identifiable owners (e.g., individuals, organizations,
+additionalGuidance: Requiring identifiable owners (e.g., individuals, organizations,
   or projects) for portable storage devices reduces the risk of using such technologies
   by allowing organizations to assign responsibility and accountability for addressing
-  known vulnerabilities in the devices (e.g., malicious code insertion). Related control:
-  PL-4.'
+  known vulnerabilities in the devices (e.g., malicious code insertion).
 relatedControls:
   - PL-4
 parametersThatMustBeDefined: None
@@ -21474,11 +21439,11 @@ class: Operational
 title: Prohibit Use of Sanitization-Resistant Media
 definition: The organization prohibits the use of sanitization-resistant media in
   organizational information systems.
-additionalGuidance: 'Sanitation-resistance applies to the capability to purge information
+additionalGuidance: Sanitation-resistance applies to the capability to purge information
   from media. Certain types of media do not support sanitize commands, or if supported,
   the interfaces are not supported in a standardized way across these devices. Sanitation-resistant
   media include, for example, compact flash, embedded flash on boards and devices,
-  solid state drives, and USB removable media. Related control: MP-6.'
+  solid state drives, and USB removable media.
 relatedControls:
   - MP-6
 parametersThatMustBeDefined: None
@@ -21867,7 +21832,7 @@ class: Operational
 title: Access by Position / Role
 definition: The organization authorizes physical access to the facility where the
   information system resides based on position or role.
-additionalGuidance: 'Related controls: AC-2, AC-3, and AC-6.'
+additionalGuidance: ''
 relatedControls:
   - AC-2
   - AC-3
@@ -22170,10 +22135,10 @@ definition: 'The organization enforces physical access authorizations to the inf
   system in addition to the physical access controls for the facility at [Assignment:
   organization-defined physical spaces containing one or more components of the information
   system].'
-additionalGuidance: 'This control enhancement provides additional physical security
+additionalGuidance: This control enhancement provides additional physical security
   for those areas within facilities where there is a concentration of information
   system components (e.g., server rooms, media storage areas, and data and communications
-  centres). Related control: PS-2.'
+  centres).
 relatedControls:
   - PS-2
 parametersThatMustBeDefined: Physical spaces containing one or more components of
@@ -22256,7 +22221,7 @@ title: Continuous Guards / Alarms / Monitoring
 definition: The organization employs guards and/or alarms to monitor every physical
   access point to the facility where the information system resides 24 hours per day,
   7 days per week.
-additionalGuidance: 'Related controls: CP-6, CP-7.'
+additionalGuidance: ''
 relatedControls:
   - CP-6
   - CP-7
@@ -22335,12 +22300,12 @@ title: Tamper Protection
 definition: 'The organization employs [Assignment: organization-defined security safeguards]
   to [Selection (one or more): detect; prevent] physical tampering or alteration of
   [Assignment: organization-defined hardware components] within the information system.'
-additionalGuidance: 'Organizations may implement tamper detection/prevention at selected
+additionalGuidance: Organizations may implement tamper detection/prevention at selected
   hardware components or tamper detection at some components and tamper prevention
   at other components. Tamper detection/prevention activities can employ many types
   of anti-tamper technologies including, for example, tamper-detection seals and anti-tamper
   coatings. Anti-tamper programs help to detect hardware alterations through counterfeiting
-  and other supply chain-related risks. Related control: SA-12.'
+  and other supply chain-related risks.
 relatedControls:
   - SA-12
 parametersThatMustBeDefined: 'Security safeguards
@@ -22387,7 +22352,7 @@ title: Facility Penetration Testing
 definition: 'The organization employs a penetration testing process that includes
   [Assignment: organization-defined frequency], unannounced attempts to bypass or
   circumvent security controls associated with physical access points to the facility.'
-additionalGuidance: 'Related controls: CA-2, CA-7.'
+additionalGuidance: ''
 relatedControls:
   - CA-2
   - CA-7
@@ -22753,7 +22718,7 @@ title: Automated Intrusion Recognition / Responses
 definition: 'The organization employs automated mechanisms to recognize [Assignment:
   organization-defined classes/types of intrusions] and initiate [Assignment: organization-defined
   response actions].'
-additionalGuidance: 'Related control: SI-4.'
+additionalGuidance: ''
 relatedControls:
   - SI-4
 parametersThatMustBeDefined: 'Classes/Types of intrusions
@@ -22972,12 +22937,12 @@ class: Operational
 title: Power Equipment and Cabling
 definition: (A)The organization protects power equipment and power cabling for the
   information system from damage and destruction.
-additionalGuidance: 'Organizations determine the types of protection necessary for
+additionalGuidance: Organizations determine the types of protection necessary for
   power equipment and cabling employed at different locations both internal and external
   to organizational facilities and environments of operation. This includes, for example,
   generators and power cabling outside of buildings, internal cabling and uninterruptable
   power sources within an office or data centre, and power sources for self-contained
-  entities such as vehicles and satellites. Related control: PE-4'
+  entities such as vehicles and satellites.
 relatedControls:
   - PE-4
 parametersThatMustBeDefined: None
@@ -23100,9 +23065,9 @@ definition: '(A)The organization provides the capability of shutting off power t
 
   (C)The organization protects emergency power shutoff capability from unauthorized
   activation.'
-additionalGuidance: 'This control applies primarily to facilities containing concentrations
+additionalGuidance: This control applies primarily to facilities containing concentrations
   of information system resources including, for example, data centres, server rooms,
-  and mainframe computer rooms. Related control: PE-15'
+  and mainframe computer rooms.
 relatedControls:
   - PE-15
 parametersThatMustBeDefined: (B) Location by information system or system components
@@ -23143,7 +23108,7 @@ definition: '(A)The organization provides a short-term uninterruptible power sup
   to facilitate [Selection (one or more): an orderly shutdown of the information system;
   transition of the information system to long-term alternate power] in the event
   of a primary power source loss.'
-additionalGuidance: 'Related controls: AT-3, CP-2, CP-7'
+additionalGuidance: ''
 relatedControls:
   - AT-3
   - CP-2
@@ -23579,9 +23544,9 @@ definition: '(A)The organization maintains temperature and humidity levels withi
 
   (B)The organization monitors temperature and humidity levels [Assignment: organization-defined
   frequency].'
-additionalGuidance: 'This control applies primarily to facilities containing concentrations
+additionalGuidance: This control applies primarily to facilities containing concentrations
   of information system resources, for example, data centres, server rooms, and mainframe
-  computer rooms. Related control: AT-3'
+  computer rooms.
 relatedControls:
   - AT-3
 parametersThatMustBeDefined: '(A) Acceptable levels
@@ -23700,11 +23665,11 @@ title: Water Damage Protection
 definition: (A)The organization protects the information system from damage resulting
   from water leakage by providing master shutoff or isolation valves that are accessible,
   working properly, and known to key personnel.
-additionalGuidance: 'This control applies primarily to facilities containing concentrations
+additionalGuidance: This control applies primarily to facilities containing concentrations
   of information system resources including, for example, data centres, server rooms,
   and mainframe computer rooms. Isolation valves can be employed in addition to or
   in lieu of master shutoff valves to shut off water supplies in specific areas of
-  concern, without affecting entire organizations. Related control: AT-3'
+  concern, without affecting entire organizations.
 relatedControls:
   - AT-3
 parametersThatMustBeDefined: None
@@ -24055,12 +24020,12 @@ definition: '(A)The organization employs [Assignment: organization-defined asset
 
   (B)The organization ensures that asset location technologies are employed in accordance
   with applicable GC legislation and TBS policies, directives, and standards.'
-additionalGuidance: 'Asset location technologies can help organizations ensure that
+additionalGuidance: Asset location technologies can help organizations ensure that
   critical assets such as vehicles or essential information system components remain
   in authorized locations. Organizations consult with the Office of the General Counsel
   and the Senior Agency Official for Privacy (SAOP)/Chief Privacy Officer (CPO) regarding
   the deployment and use of asset location technologies to address potential privacy
-  concerns. Related control: CM-8'
+  concerns.
 relatedControls:
   - CM-8
 parametersThatMustBeDefined: '(A) Asset location technologies
@@ -24468,13 +24433,12 @@ definition: '(A)The organization develops a security Concept of Operations (CONO
 
   (B)The organization Reviews and updates the CONOPS [Assignment: organization-defined
   frequency].'
-additionalGuidance: 'The security CONOPS may be included in the security plan for
-  the information system or in other system development life cycle-related documents,
+additionalGuidance: The security CONOPS may be included in the security plan for the
+  information system or in other system development life cycle-related documents,
   as appropriate. Changes to the CONOPS are reflected in ongoing updates to the security
   plan, the information security architecture, and other appropriate organizational
   documents (e.g., security specifications for procurements/acquisitions, system development
-  life cycle documents and systems/security engineering documents). Related control:
-  PL-2'
+  life cycle documents and systems/security engineering documents).
 relatedControls:
   - PL-2
 parametersThatMustBeDefined: (B) Frequency
@@ -24676,14 +24640,13 @@ title: Supplier Diversity
 definition: 'The organization requires that [Assignment: organization-defined security
   safeguards] allocated to [Assignment: organization-defined locations and architectural
   layers] are obtained from different suppliers.'
-additionalGuidance: 'Different information technology products have different strengths
+additionalGuidance: Different information technology products have different strengths
   and weaknesses. Providing a broad spectrum of products complements the individual
   offerings. For example, vendors offering malicious code protection typically update
   their products at different times, often developing solutions for known viruses,
   Trojans, or worms according to their priorities and development schedules. By having
   different products at different locations (e.g., server, boundary, desktop) there
-  is an increased likelihood that at least one will detect the malicious code. Related
-  control: SA-12.'
+  is an increased likelihood that at least one will detect the malicious code.
 relatedControls:
   - SA-12
 parametersThatMustBeDefined: 'Security safeguards
@@ -24983,7 +24946,7 @@ definition: The organization ensures that individuals accessing an information s
   processing, storing, or transmitting classified information are cleared and indoctrinated
   to the highest classification level of the information to which they have access
   on the system.
-additionalGuidance: 'Related controls: AC-3, AC-4.'
+additionalGuidance: ''
 relatedControls:
   - AC-3
   - AC-4
@@ -25350,13 +25313,13 @@ definition: "(A)The organization develops and documents access agreements for or
   \ \n(a)Sign appropriate access agreements prior to being granted access; and\n(b)Re-sign\
   \ access agreements to maintain access to organizational information systems when\
   \ access agreements have been updated or [Assignment: organization-defined frequency]."
-additionalGuidance: 'Access agreements include, for example, nondisclosure agreements,
+additionalGuidance: Access agreements include, for example, nondisclosure agreements,
   acceptable use agreements, rules of behaviour, and conflict-of-interest agreements.
   Signed access agreements include an acknowledgement that individuals have read,
   understood, and agreed to abide by the constraints associated with organizational
   information systems to which access is authorized. Organizations can use electronic
   signatures to acknowledge access agreements unless specifically prohibited by organizational
-  policy. Related control: PL-4, PS-2, PS-3, PS-4, PS-8'
+  policy.
 relatedControls:
   - PL-4
   - PS-2
@@ -25961,7 +25924,7 @@ title: Update by Frequency / Prior to New Scan / When Identified
 definition: 'The organization updates the information system vulnerabilities scanned
   [Selection (one or more): [Assignment: organization-defined frequency]; prior to
   a new scan; when new vulnerabilities are identified and reported].'
-additionalGuidance: 'Related controls: SI-3, SI-5.'
+additionalGuidance: ''
 relatedControls:
   - SI-3
   - SI-5
@@ -26046,13 +26009,12 @@ title: Discoverable Information
 definition: 'The organization determines what information about the information system
   is discoverable by adversaries and subsequently takes [Assignment: organization-defined
   corrective actions].'
-additionalGuidance: 'Discoverable information includes information that adversaries
+additionalGuidance: Discoverable information includes information that adversaries
   could obtain without directly compromising or breaching the information system,
   for example, by collecting information the system is exposing or by conducting extensive
   searches of the web. Corrective actions can include, for example, notifying appropriate
   organizational personnel, removing designated information, or changing the information
   system to make designated information less relevant or attractive to adversaries.
-  Related control: AU-13.'
 relatedControls:
   - AU-13
 parametersThatMustBeDefined: Corrective actions
@@ -26137,7 +26099,7 @@ class: Management
 title: Automated Trend Analyses
 definition: The organization employs automated mechanisms to compare the results of
   vulnerability scans over time to determine trends in information system vulnerabilities.
-additionalGuidance: 'Related controls: IR-4, IR-5, SI-4.'
+additionalGuidance: ''
 relatedControls:
   - IR-4
   - IR-5
@@ -26178,7 +26140,7 @@ class: Management
 title: Review Historic Audit Logs
 definition: The organization reviews historic audit logs to determine if a vulnerability
   identified in the information system has been previously exploited.
-additionalGuidance: 'Related control: AU-6.'
+additionalGuidance: ''
 relatedControls:
   - AU-6
 parametersThatMustBeDefined: None
@@ -26607,10 +26569,10 @@ title: Functional Properties of Security Controls
 definition: The organization requires the developer of the information system, system
   component, or information system service to provide a description of the functional
   properties of the security controls to be employed.
-additionalGuidance: 'Functional properties of security controls describe the functionality
+additionalGuidance: Functional properties of security controls describe the functionality
   (i.e., security capability, functions, or mechanisms) visible at the interfaces
   of the controls and specifically exclude functionality and data structures internal
-  to the operation of the controls. Related control: SA-5.'
+  to the operation of the controls.
 relatedControls:
   - SA-5
 parametersThatMustBeDefined: None
@@ -26653,7 +26615,7 @@ definition: 'The organization requires the developer of the information system, 
   security-relevant external system interfaces; high-level design; low-level design;
   source code or hardware schematics; [Assignment: organization-defined design/implementation
   information]] at [Assignment: organization-defined level of detail].'
-additionalGuidance: 'Organizations may require different levels of detail in design
+additionalGuidance: Organizations may require different levels of detail in design
   and implementation documentation for security controls employed in organizational
   information systems, system components, or information system services based on
   mission/business requirements, requirements for trustworthiness/resiliency, and
@@ -26665,7 +26627,7 @@ additionalGuidance: 'Organizations may require different levels of detail in des
   emphasis on software and firmware (but not excluding hardware) and the interfaces
   between modules providing security-relevant functionality. Source code and hardware
   schematics are typically referred to as the implementation representation of the
-  information system. Related control: SA-5.'
+  information system.
 relatedControls:
   - SA-5
 parametersThatMustBeDefined: 'Selection (one or more): security-relevant external
@@ -26715,13 +26677,13 @@ definition: 'The organization requires the developer of the information system, 
   life cycle that includes [Assignment: organization-defined state-of-the-practice
   system/security engineering methods, software development methods, testing/evaluation/validation
   techniques, and quality control processes].'
-additionalGuidance: 'Following a well-defined system development life cycle that includes
+additionalGuidance: Following a well-defined system development life cycle that includes
   state-of-the-practice software development methods, systems/security engineering
   methods, quality control processes, and testing, evaluation, and validation techniques
   helps to reduce the number and severity of latent errors within information systems,
   system components, and information system services. Reducing the number/severity
   of such errors reduces the number of vulnerabilities in those systems, components,
-  and services. Related control: SA-12.'
+  and services.
 relatedControls:
   - SA-12
 parametersThatMustBeDefined: State-of-the-practice system/security engineering methods,
@@ -26768,8 +26730,8 @@ definition: 'The organization requires the developer of the information system, 
 
   (b)Use the configurations as the default for any subsequent system, component, or
   service reinstallation or upgrade.'
-additionalGuidance: 'Security characteristics include, for example, requiring that
-  all default passwords have been changed. Related control: CM-8.'
+additionalGuidance: Security characteristics include, for example, requiring that
+  all default passwords have been changed.
 relatedControls:
   - CM-8
 parametersThatMustBeDefined: (b) Security configurations
@@ -26866,7 +26828,7 @@ definition: '(a)The organization limits the use of commercially provided informa
   specific technology type but a commercially provided information technology product
   relies on cryptographic functionality to enforce its security policy, that the cryptographic
   module is FIPS-validated.'
-additionalGuidance: 'Related controls: SC-12, SC-13.'
+additionalGuidance: ''
 relatedControls:
   - SC-12
   - SC-13
@@ -26908,13 +26870,13 @@ definition: 'The organization requires the developer of the information system, 
   component, or information system service to produce a plan for the continuous monitoring
   of security control effectiveness that contains [Assignment: organization-defined
   level of detail].'
-additionalGuidance: 'The objective of continuous monitoring plans is to determine
-  if the complete set of planned, required, and deployed security controls within
-  the information system, system component, or information system service continue
-  to be effective over time based on the inevitable changes that occur. Developer
-  continuous monitoring plans include a sufficient level of detail such that the information
+additionalGuidance: The objective of continuous monitoring plans is to determine if
+  the complete set of planned, required, and deployed security controls within the
+  information system, system component, or information system service continue to
+  be effective over time based on the inevitable changes that occur. Developer continuous
+  monitoring plans include a sufficient level of detail such that the information
   can be incorporated into the continuous monitoring strategies and programs implemented
-  by organizations. Related control: CA-7.'
+  by organizations.
 relatedControls:
   - CA-7
 parametersThatMustBeDefined: Level of detail
@@ -27301,11 +27263,10 @@ title: Identification of Functions / Ports / Protocols / Services
 definition: 'The organization requires providers of [Assignment: organization-defined
   external information system services] to identify the functions, ports, protocols,
   and other services required for the use of such services.'
-additionalGuidance: 'Information from external service providers regarding the specific
+additionalGuidance: Information from external service providers regarding the specific
   functions, ports, protocols, and services used in the provision of such services
   can be particularly useful when the need arises to understand the trade-offs involved
-  in restricting certain functions/services or blocking certain ports/protocols. Related
-  control: CM-7.'
+  in restricting certain functions/services or blocking certain ports/protocols.
 relatedControls:
   - CM-7
 parametersThatMustBeDefined: External information system services
@@ -27609,13 +27570,13 @@ title: Software / Firmware Integrity Verification
 definition: The organization requires the developer of the information system, system
   component, or information system service to enable integrity verification of software
   and firmware components.
-additionalGuidance: 'This control enhancement allows organizations to detect unauthorized
+additionalGuidance: This control enhancement allows organizations to detect unauthorized
   changes to software and firmware components through the use of tools, techniques,
   and/or mechanisms provided by developers. Integrity checking mechanisms can also
   address counterfeiting of software and firmware components. Organizations verify
   the integrity of software and firmware components, for example, through secure one-way
   hashes provided by developers. Delivered software and firmware components also include
-  any updates to such components. Related control: SI-7.'
+  any updates to such components.
 relatedControls:
   - SI-7
 parametersThatMustBeDefined: None
@@ -27702,12 +27663,12 @@ title: Hardware Integrity Verification
 definition: The organization requires the developer of the information system, system
   component, or information system service to enable integrity verification of hardware
   components.
-additionalGuidance: 'This control enhancement allows organizations to detect unauthorized
+additionalGuidance: This control enhancement allows organizations to detect unauthorized
   changes to hardware components through the use of tools, techniques, and/or mechanisms
   provided by developers. Organizations verify the integrity of hardware components,
   for example, with hard-to-copy labels and verifiable serial numbers provided by
   developers, and by requiring the implementation of anti-tamper technologies. Delivered
-  hardware components also include updates to such components. Related control: SI-7.'
+  hardware components also include updates to such components.
 relatedControls:
   - SI-7
 parametersThatMustBeDefined: None
@@ -28022,7 +27983,7 @@ title: Threat and Vulnerability Analyses
 definition: The organization requires the developer of the information system, system
   component, or information system service to perform threat and vulnerability analyses
   and subsequent testing/evaluation of the as-built system, component, or service.
-additionalGuidance: 'Applications may deviate significantly from the functional and
+additionalGuidance: Applications may deviate significantly from the functional and
   design specifications created during the requirements and design phases of the system
   development life cycle. Therefore, threat and vulnerability analyses of information
   systems, system components, and information system services prior to delivery are
@@ -28030,7 +27991,6 @@ additionalGuidance: 'Applications may deviate significantly from the functional 
   Threat and vulnerability analyses at this phase of the life cycle help to ensure
   that design or implementation changes have been accounted for, and that any new
   vulnerabilities created as a result of those changes have been reviewed and mitigated.
-  Related control: RA-5.'
 relatedControls:
   - RA-5
 parametersThatMustBeDefined: None
@@ -28461,8 +28421,7 @@ additionalGuidance: 'The use of acquisition and procurement processes by organiz
   delivery to limit opportunities for adversaries to corrupt information system components
   or products. Finally, organizations can use trusted/controlled distribution, delivery,
   and warehousing options to reduce supply chain risk (e.g., requiring tamper-evident
-  packaging of information system components during shipping and warehousing). Related
-  control: SA-19.'
+  packaging of information system components during shipping and warehousing).'
 relatedControls:
   - SA-19
 parametersThatMustBeDefined: Tailored acquisition strategies, contract tools, and
@@ -28647,7 +28606,7 @@ title: Use of All-Source Intelligence
 definition: The organization uses all-source intelligence analysis of suppliers and
   potential suppliers of the information system, system component, or information
   system service.
-additionalGuidance: 'All-source intelligence analysis is employed by organizations
+additionalGuidance: All-source intelligence analysis is employed by organizations
   to inform engineering, acquisition, and risk management decisions. All-source intelligence
   consists of intelligence products and/or organizations and activities that incorporate
   all sources of information, most frequently including human intelligence, imagery
@@ -28656,7 +28615,7 @@ additionalGuidance: 'All-source intelligence analysis is employed by organizatio
   information is used to analyze the risk of both intentional and unintentional vulnerabilities
   from development, manufacturing, and delivery processes, people, and the environment.
   This review is performed on suppliers at multiple tiers in the supply chain sufficient
-  to manage risks. Related control: SA-15.'
+  to manage risks.
 relatedControls:
   - SA-15
 parametersThatMustBeDefined: None
@@ -28712,8 +28671,7 @@ additionalGuidance: 'Supply chain information includes, for example: user identi
   may compromise the confidentiality of users or users of the supply chain. OPSEC
   may require organizations to withhold critical mission/business information from
   suppliers and may include the use of intermediaries to hide the end use, or users,
-  of information systems, system components, or information system services. Related
-  control: PE-2x.'
+  of information systems, system components, or information system services.'
 relatedControls:
   - PE-2x
 parametersThatMustBeDefined: OPSEC safeguards
@@ -28811,8 +28769,7 @@ additionalGuidance: 'This control enhancement addresses analysis and/or testing 
   of supply chain elements. Supply chain actors are individuals with specific roles
   and responsibilities in the supply chain. The evidence generated during analyses
   and testing of supply chain elements, processes, and actors is documented and used
-  to inform organizational risk management activities and decisions. Related control:
-  RA-5.'
+  to inform organizational risk management activities and decisions.'
 relatedControls:
   - RA-5
 parametersThatMustBeDefined: 'Selection (one or more): organizational analysis, independent
@@ -29421,7 +29378,7 @@ definition: 'The organization requires that developers perform threat modeling a
   (b)Employs [Assignment: organization-defined tools and methods]; and
 
   (c)Produces evidence that meets [Assignment: organization-defined acceptance criteria].'
-additionalGuidance: 'Related control: SA-4.'
+additionalGuidance: ''
 relatedControls:
   - SA-4
 parametersThatMustBeDefined: 'Breadth/depth
@@ -29471,7 +29428,7 @@ title: Attack Surface Reduction
 definition: 'The organization requires the developer of the information system, system
   component, or information system service to reduce attack surfaces to [Assignment:
   organization-defined thresholds].'
-additionalGuidance: 'Attack surface reduction is closely aligned with developer threat
+additionalGuidance: Attack surface reduction is closely aligned with developer threat
   and vulnerability analyses and information system architecture and design. Attack
   surface reduction is a means of reducing risk to organizations by giving attackers
   less opportunity to exploit weaknesses or deficiencies (i.e., potential vulnerabilities)
@@ -29480,7 +29437,7 @@ additionalGuidance: 'Attack surface reduction is closely aligned with developer 
   of least privilege, employing layered defences, applying the principle of least
   functionality (i.e., restricting ports, protocols, functions, and services), deprecating
   unsafe functions, and eliminating application programming interfaces (APIs) that
-  are vulnerable to cyber-attacks. Related control: CM-7.'
+  are vulnerable to cyber-attacks.
 relatedControls:
   - CM-7
 parametersThatMustBeDefined: Thresholds
@@ -29571,7 +29528,7 @@ definition: 'The organization requires the developer of the information system, 
 
   (d)Deliver the outputs of the tools and results of the analysis to [Assignment:
   organization-defined personnel or roles].'
-additionalGuidance: 'Related control: RA-5.'
+additionalGuidance: ''
 relatedControls:
   - RA-5
 parametersThatMustBeDefined: '(a) Tools
@@ -29700,12 +29657,12 @@ class: Management
 title: Incident Response Plan
 definition: The organization requires the developer of the information system, system
   component, or information system service to provide an incident response plan.
-additionalGuidance: 'The incident response plan for developers of information systems,
+additionalGuidance: The incident response plan for developers of information systems,
   system components, and information system services is incorporated into organizational
   incident response plans to provide the type of incident response information not
   readily available to organizations. Such information may be extremely helpful, for
   example, when organizations respond to vulnerabilities in commercial off-the-shelf
-  (COTS) information technology products. Related control: IR-8.'
+  (COTS) information technology products.
 relatedControls:
   - IR-8
 parametersThatMustBeDefined: None
@@ -29955,10 +29912,9 @@ definition: 'The organization requires the developer of the information system, 
 
   (b)Provide a rationale that the definition for security-relevant hardware, software,
   and firmware is complete.'
-additionalGuidance: 'Security-relevant hardware, software, and firmware represent
-  the portion of the information system, component, or service that must be trusted
-  to perform correctly in order to maintain required security properties. Related
-  control: SA-5.'
+additionalGuidance: Security-relevant hardware, software, and firmware represent the
+  portion of the information system, component, or service that must be trusted to
+  perform correctly in order to maintain required security properties.
 relatedControls:
   - SA-5
 parametersThatMustBeDefined: None
@@ -30015,7 +29971,7 @@ definition: 'The organization requires the developer of the information system, 
   (e)Describe the security-relevant hardware, software, and firmware mechanisms not
   addressed in the formal top-level specification but strictly internal to the security-relevant
   hardware, software, and firmware.'
-additionalGuidance: 'Correspondence is an important part of the assurance gained through
+additionalGuidance: Correspondence is an important part of the assurance gained through
   modeling. It demonstrates that the implementation is an accurate transformation
   of the model, and that any additional code or implementation details present have
   no impact on the behaviours or policies being modeled. Formal methods can be used
@@ -30029,8 +29985,7 @@ additionalGuidance: 'Correspondence is an important part of the assurance gained
   due to limitations in the applicability of formal methods to prove that the specification
   accurately reflects the implementation. Hardware, software, and firmware mechanisms
   strictly internal to security-relevant hardware, software, and firmware include,
-  for example, mapping registers and direct memory input/output. Related control:
-  SA-5.'
+  for example, mapping registers and direct memory input/output.
 relatedControls:
   - SA-5
 parametersThatMustBeDefined: None
@@ -30087,7 +30042,7 @@ definition: 'The organization requires the developer of the information system, 
   (e)Describe the security-relevant hardware, software, and firmware mechanisms not
   addressed in the descriptive top-level specification but strictly internal to the
   security-relevant hardware, software, and firmware.'
-additionalGuidance: 'Correspondence is an important part of the assurance gained through
+additionalGuidance: Correspondence is an important part of the assurance gained through
   modeling. It demonstrates that the implementation is an accurate transformation
   of the model, and that any additional code or implementation details present has
   no impact on the behaviours or policies being modeled. Consistency between the descriptive
@@ -30096,7 +30051,6 @@ additionalGuidance: 'Correspondence is an important part of the assurance gained
   of formal/informal methods may be needed to show such consistency. Hardware, software,
   and firmware mechanisms strictly internal to security-relevant hardware, software,
   and firmware include, for example, mapping registers and direct memory input/output.
-  Related control: SA-5.'
 relatedControls:
   - SA-5
 parametersThatMustBeDefined: '(b) Selection: informal demonstration; convincing argument
@@ -30143,7 +30097,7 @@ definition: 'The organization requires the developer of the information system, 
 
   (b)Internally structure the security-relevant hardware, software, and firmware with
   specific regard for this mechanism.'
-additionalGuidance: 'Related control: SC-3.'
+additionalGuidance: ''
 relatedControls:
   - SC-3
 parametersThatMustBeDefined: None
@@ -30183,7 +30137,7 @@ title: Structure for Testing
 definition: The organization requires the developer of the information system, system
   component, or information system service to structure security-relevant hardware,
   software, and firmware to facilitate testing.
-additionalGuidance: 'Related control: SA-1x.'
+additionalGuidance: ''
 relatedControls:
   - SA-1x
 parametersThatMustBeDefined: None
@@ -30223,7 +30177,7 @@ title: Structure for Least Privilege
 definition: The organization requires the developer of the information system, system
   component, or information system service to structure security-relevant hardware,
   software, and firmware to facilitate controlling access with least privilege.
-additionalGuidance: 'Related controls: AC-5, AC-6.'
+additionalGuidance: ''
 relatedControls:
   - AC-5
   - AC-6
@@ -30310,12 +30264,11 @@ title: Multiple Phases of SDLC
 definition: The organization employs anti-tamper technologies and techniques during
   multiple phases in the system development life cycle including design, development,
   integration, operations, and maintenance.
-additionalGuidance: 'Organizations use a combination of hardware and software techniques
+additionalGuidance: Organizations use a combination of hardware and software techniques
   for tamper resistance and detection. Organizations employ obfuscation and self-checking,
   for example, to make reverse engineering and modifications more difficult, time-consuming,
   and expensive for adversaries. Customization of information systems and system components
-  can make substitutions easier to detect and therefore limit damage. Related control:
-  SA-3.'
+  can make substitutions easier to detect and therefore limit damage.
 relatedControls:
   - SA-3
 parametersThatMustBeDefined: None
@@ -30356,11 +30309,10 @@ definition: 'The organization inspects [Assignment: organization-defined informa
   systems, system components, or devices] [Selection (one or more): at random; at
   [Assignment: organization-defined frequency], upon [Assignment: organization-defined
   indications of need for inspection]] to detect tampering.'
-additionalGuidance: 'This control enhancement addresses both physical and logical
-  tampering and is typically applied to mobile devices, notebook computers, or other
-  system components taken out of organization-controlled areas. Indications of need
-  for inspection include, for example, when individuals return from travel to high-risk
-  locations. Related control: SI-4.'
+additionalGuidance: This control enhancement addresses both physical and logical tampering
+  and is typically applied to mobile devices, notebook computers, or other system
+  components taken out of organization-controlled areas. Indications of need for inspection
+  include, for example, when individuals return from travel to high-risk locations.
 relatedControls:
   - SI-4
 parametersThatMustBeDefined: 'Information systems, system components, or devices
@@ -31002,12 +30954,11 @@ class: Technical
 title: Interfaces for Non-Privileged Users
 definition: The information system prevents the presentation of information system
   management-related functionality at an interface for non-privileged users.
-additionalGuidance: 'This control enhancement ensures that administration options
-  (e.g., administrator privileges) are not available to general users (including prohibiting
+additionalGuidance: This control enhancement ensures that administration options (e.g.,
+  administrator privileges) are not available to general users (including prohibiting
   the use of the grey-out option commonly used to eliminate accessibility to such
   information). Such restrictions include, for example, not presenting administration
-  options until users establish sessions with administrator privileges. Related control:
-  AC-3.'
+  options until users establish sessions with administrator privileges.
 relatedControls:
   - AC-3
 parametersThatMustBeDefined: None
@@ -31795,7 +31746,7 @@ definition: '(a)The organization implements a managed interface for each externa
   (e)The organization reviews exceptions to the traffic flow policy [Assignment: organization-defined
   frequency] and removes exceptions that are no longer supported by an explicit mission/business
   need.'
-additionalGuidance: 'Related control: SC-8.'
+additionalGuidance: ''
 relatedControls:
   - SC-8
 parametersThatMustBeDefined: (e) Frequency
@@ -32051,7 +32002,7 @@ additionalGuidance: 'Safeguards implemented by organizations to prevent unauthor
   protocol formats and specification at the application layer and serve to identify
   vulnerabilities that cannot be detected by devices operating at the network or transport
   layers. This control enhancement is closely associated with cross-domain solutions
-  and system guards enforcing information flow requirements. Related control: SI-3.'
+  and system guards enforcing information flow requirements.'
 relatedControls:
   - SI-3
 parametersThatMustBeDefined: None
@@ -32091,13 +32042,12 @@ title: Restrict Incoming Communications Traffic
 definition: 'The information system only allows incoming communications from [Assignment:
   organization-defined authorized sources] routed to [Assignment: organization-defined
   authorized destinations].'
-additionalGuidance: 'This control enhancement provides determinations that source
-  and destination address pairs represent authorized/allowed communications. Such
-  determinations can be based on several factors including, for example, the presence
-  of source/destination address pairs in lists of authorized/allowed communications,
-  the absence of address pairs in lists of unauthorized/disallowed pairs, or meeting
-  more general rules for authorized/allowed source/destination pairs. Related control:
-  AC-3.'
+additionalGuidance: This control enhancement provides determinations that source and
+  destination address pairs represent authorized/allowed communications. Such determinations
+  can be based on several factors including, for example, the presence of source/destination
+  address pairs in lists of authorized/allowed communications, the absence of address
+  pairs in lists of unauthorized/disallowed pairs, or meeting more general rules for
+  authorized/allowed source/destination pairs.
 relatedControls:
   - AC-3
 parametersThatMustBeDefined: 'Authorized sources
@@ -32277,7 +32227,7 @@ class: Technical
 title: Route Privileged Network Accesses
 definition: The information system routes all networked, privileged accesses through
   a dedicated, managed interface for purposes of access control and auditing.
-additionalGuidance: 'Related controls: AC-2, AC-3, AU-2, SI-4.'
+additionalGuidance: ''
 relatedControls:
   - AC-2
   - AC-3
@@ -32361,11 +32311,11 @@ family: SC
 class: Technical
 title: Automated Enforcement of Protocol Formats
 definition: The information system enforces adherence to protocol formats.
-additionalGuidance: 'Information system components that enforce protocol formats include,
+additionalGuidance: Information system components that enforce protocol formats include,
   for example, deep packet inspection firewalls and xML gateways. Such system components
   verify adherence to protocol formats/specifications (e.g., IEEE) at the application
   layer and identify significant vulnerabilities that cannot be detected by devices
-  operating at the network or transport layers. Related control: SC-4.'
+  operating at the network or transport layers.
 relatedControls:
   - SC-4
 parametersThatMustBeDefined: None
@@ -32735,12 +32685,12 @@ definition: 'The information system implements cryptographic mechanisms to [Sele
   information] during transmission unless otherwise protected by [Assignment: organization-defined
   alternative physical safeguards]. The cryptography must be compliant with the requirements
   of control SC-x3.'
-additionalGuidance: 'Encrypting information for transmission protects information
-  from unauthorized disclosure and modification. Cryptographic mechanisms implemented
-  to protect information integrity include, for example, cryptographic hash functions
+additionalGuidance: Encrypting information for transmission protects information from
+  unauthorized disclosure and modification. Cryptographic mechanisms implemented to
+  protect information integrity include, for example, cryptographic hash functions
   which have common application in digital signatures, checksums, and message authentication
   codes. Alternative physical security safeguards include, for example, protected
-  distribution systems. Related control: SC-13.'
+  distribution systems.
 relatedControls:
   - SC-13
 parametersThatMustBeDefined: 'Selection (one or more): prevent unauthorized disclosure
@@ -32783,11 +32733,11 @@ class: Technical
 title: Pre / Post Transmission Handling
 definition: 'The information system maintains the [Selection (one or more): confidentiality;
   integrity] of information during preparation for transmission and during reception.'
-additionalGuidance: 'Information can be either unintentionally or maliciously disclosed
+additionalGuidance: Information can be either unintentionally or maliciously disclosed
   or modified during preparation for transmission or during reception including, for
   example, during aggregation, at protocol transformation points, and during packing/unpacking.
   These unauthorized disclosures or modifications compromise the confidentiality or
-  integrity of the information. Related control: AU-10.'
+  integrity of the information.
 relatedControls:
   - AU-10
 parametersThatMustBeDefined: 'Selection (one or more): confidentiality; integrity'
@@ -33309,10 +33259,9 @@ definition: '(A)The information system prohibits remote activation of collaborat
 
   (B)The information system provides an explicit indication of use to users physically
   present at the devices.'
-additionalGuidance: 'Collaborative computing devices include, for example, networked
+additionalGuidance: Collaborative computing devices include, for example, networked
   white boards, cameras, and microphones. Explicit indication of use includes, for
-  example, signals to users when collaborative computing devices are activated. Related
-  control: AC-2x'
+  example, signals to users when collaborative computing devices are activated.
 relatedControls:
   - AC-2x
 parametersThatMustBeDefined: (A) Exceptions where remote activation is to be allowed
@@ -33562,11 +33511,11 @@ title: Public Key Infrastructure Certificates
 definition: '(A)The organization issues public key certificates under an [Assignment:
   organization-defined certificate policy] or obtains public key certificates from
   an approved service provider.'
-additionalGuidance: 'For all certificates, organizations manage information system
+additionalGuidance: For all certificates, organizations manage information system
   trust stores to ensure only approved trust anchors are in the trust stores. This
   control addresses both certificates with visibility external to organizational information
   systems and certificates related to the internal operations of systems, for example,
-  application-specific time services. Related control: SC-12'
+  application-specific time services.
 relatedControls:
   - SC-12
 parametersThatMustBeDefined: (A) Certificate policy
@@ -33873,7 +33822,7 @@ definition: '(A)The organization establishes usage restrictions and implementati
 
   (B)The organization authorizes, monitors, and controls the use of VoIP within the
   information system.'
-additionalGuidance: 'Related controls: CM-6, SC-7, SC-15'
+additionalGuidance: ''
 relatedControls:
   - CM-6
   - SC-7
@@ -33917,8 +33866,8 @@ definition: Unclassified VoIP is not permitted within classified facilities unle
 additionalGuidance: VoIP in classified facilities should comply with CNSSI-5000 [Reference
   55]. Some authorizers may require CNSSI-5000 compliance.
 relatedControls:
-  - SI-50
-  - SI-50
+  - SI-5000
+  - SI-5000
 parametersThatMustBeDefined: None
 suggestedPlaceholderValues: ''
 mappings:
@@ -33958,8 +33907,8 @@ definition: Unclassified VoIP over a Local Area Network (LAN) with access to a p
 additionalGuidance: VoIP in classified facilities should comply with CNSSI-5000 [Reference
   55]. Some authorizers may require CNSSI-5000 compliance.
 relatedControls:
-  - SI-50
-  - SI-50
+  - SI-5000
+  - SI-5000
 parametersThatMustBeDefined: None
 suggestedPlaceholderValues: ''
 mappings:
@@ -34283,10 +34232,10 @@ title: Unique Session Identifiers with Randomization
 definition: 'The information system generates a unique session identifier for each
   session with [Assignment: organization-defined randomness requirements] and recognizes
   only session identifiers that are system-generated.'
-additionalGuidance: 'This control enhancement curtails the ability of adversaries
-  from reusing previously valid session IDs. Employing the concept of randomness in
-  the generation of unique session identifiers helps to protect against brute-force
-  attacks to determine future session identifiers. Related control: SC-13.'
+additionalGuidance: This control enhancement curtails the ability of adversaries from
+  reusing previously valid session IDs. Employing the concept of randomness in the
+  generation of unique session identifiers helps to protect against brute-force attacks
+  to determine future session identifiers.
 relatedControls:
   - SC-13
 parametersThatMustBeDefined: Randomness requirements
@@ -34325,11 +34274,11 @@ class: Technical
 title: Allowed Certificate Authorities
 definition: 'The information system only allows the use of [Assignment: organization-defined
   certificate authorities] for verification of the establishment of protected sessions.'
-additionalGuidance: 'Reliance on certificate authorities (CAs) for the establishment
+additionalGuidance: Reliance on certificate authorities (CAs) for the establishment
   of secure sessions includes, for example, the use of Secure Socket Layer (SSL) and/or
   Transport Layer Security (TLS) certificates. These certificates, after verification
   by the respective certificate authorities, facilitate the establishment of protected
-  sessions between web clients and web servers. Related control: SC-13.'
+  sessions between web clients and web servers.
 relatedControls:
   - SC-13
 parametersThatMustBeDefined: Certificate authorities
@@ -34425,10 +34374,10 @@ class: Technical
 title: Thin Nodes
 definition: '(A)The organization employs [Assignment: organization-defined information
   system components] with minimal functionality and information storage.'
-additionalGuidance: 'The deployment of information system components with reduced/minimal
+additionalGuidance: The deployment of information system components with reduced/minimal
   functionality (e.g., diskless nodes and thin client technologies) reduces the need
   to secure every user endpoint, and may reduce the exposure of information, information
-  systems, and services to cyber-attacks. Related control: SC-30'
+  systems, and services to cyber-attacks.
 relatedControls:
   - SC-30
 parametersThatMustBeDefined: (A) Information system components
@@ -34519,7 +34468,7 @@ additionalGuidance: 'Platforms are combinations of hardware and software used to
   that run on multiple platforms. Such applications promote portability and reconstitution
   on different platforms, increasing the availability of critical functions within
   organizations while information systems with specific operating systems are under
-  attack. Related control: SC-29'
+  attack.'
 relatedControls:
   - SC-29
 parametersThatMustBeDefined: Platform-independent applications
@@ -35599,14 +35548,14 @@ title: Polling Techniques
 definition: 'The organization employs polling techniques to identify potential faults,
   errors, or compromises to [Assignment: organization-defined distributed processing
   and storage components].'
-additionalGuidance: 'Distributed processing and/or storage may be employed to reduce
+additionalGuidance: Distributed processing and/or storage may be employed to reduce
   opportunities for adversaries to successfully compromise the confidentiality, integrity,
   or availability of information and information systems. However, distribution of
   processing and/or storage components does not prevent adversaries from compromising
   one (or more) of the distributed components. Polling compares the processing results
   and/or storage content from the various distributed components and ensures that
   they agree. Polling identifies potential faults, errors, or compromises in distributed
-  processing and/or storage components. Related control: SI-4.'
+  processing and/or storage components.
 relatedControls:
   - SI-4
 parametersThatMustBeDefined: Distributed processing and storage components
@@ -36974,7 +36923,7 @@ title: Automated Flaw Remediation Status
 definition: 'The organization employs automated mechanisms [Assignment: organization-defined
   frequency] to determine the state of information system components with regard to
   flaw remediation.'
-additionalGuidance: 'Related controls: CM-6, SI-4.'
+additionalGuidance: ''
 relatedControls:
   - CM-6
   - SI-4
@@ -37292,10 +37241,9 @@ class: Operational
 title: Automatic Updates
 definition: The information system automatically updates malicious code protection
   mechanisms.
-additionalGuidance: 'Malicious code protection mechanisms include, for example, signature
+additionalGuidance: Malicious code protection mechanisms include, for example, signature
   definitions. Due to information system integrity and availability concerns, organizations
   give careful consideration to the methodology used to carry out automatic updates.
-  Related control: SI-8.'
 relatedControls:
   - SI-8
 parametersThatMustBeDefined: None
@@ -37380,7 +37328,7 @@ definition: '(a)The organization tests malicious code protection mechanisms [Ass
 
   (b)The organization verifies that both detection of the test case and associated
   incident reporting occur.'
-additionalGuidance: 'Related controls: CA-2, CA-7, RA-5.'
+additionalGuidance: ''
 relatedControls:
   - CA-2
   - CA-7
@@ -37468,7 +37416,7 @@ definition: 'The information system detects [Assignment: organization-defined un
   at [Assignment: organization-defined information system hardware components] and
   [Selection (one or more): issues a warning; audits the command execution; prevents
   the execution of the command].'
-additionalGuidance: 'This control enhancement can also be applied to critical interfaces
+additionalGuidance: This control enhancement can also be applied to critical interfaces
   other than kernel-based interfaces, including for example, interfaces with virtual
   machines and privileged applications. Unauthorized operating system commands include,
   for example, commands for kernel functions from information system processes that
@@ -37479,7 +37427,6 @@ additionalGuidance: 'This control enhancement can also be applied to critical in
   can define hardware components by specific component, component type, location in
   the network, or combination therein. Organizations may select different actions
   for different types/classes/specific instances of potentially malicious commands.
-  Related control: AU-6.'
 relatedControls:
   - AU-6
 parametersThatMustBeDefined: 'Unauthorized operating system commands
@@ -38002,10 +37949,10 @@ class: Operational
 title: Testing of Monitoring Tools
 definition: 'The organization tests intrusion-monitoring tools [Assignment: organization-defined
   frequency].'
-additionalGuidance: 'Testing intrusion-monitoring tools is necessary to ensure that
+additionalGuidance: Testing intrusion-monitoring tools is necessary to ensure that
   the tools are operating correctly and continue to meet the monitoring objectives
   of organizations. The frequency of testing depends on the types of tools used by
-  organizations and methods of deployment. Related control: CP-9.'
+  organizations and methods of deployment.
 relatedControls:
   - CP-9
 parametersThatMustBeDefined: Frequency
@@ -38274,7 +38221,7 @@ class: Operational
 title: Wireless to Wireline Communications
 definition: The organization employs an intrusion detection system to monitor wireless
   communications traffic as the traffic passes from wireless to wireline networks.
-additionalGuidance: 'Related control: AC-18.'
+additionalGuidance: ''
 relatedControls:
   - AC-18
 parametersThatMustBeDefined: None
@@ -38313,14 +38260,14 @@ class: Operational
 title: Correlate Monitoring Information
 definition: The organization correlates information from monitoring tools employed
   throughout the information system.
-additionalGuidance: 'Correlating information from different monitoring tools can provide
+additionalGuidance: Correlating information from different monitoring tools can provide
   a more comprehensive view of information system activity. The correlation of monitoring
   tools that usually work in isolation (e.g., host monitoring, network monitoring,
   anti-virus software) can provide an organization-wide view and in so doing, may
   reveal otherwise unseen attack patterns. Understanding the capabilities/limitations
   of diverse monitoring tools and how to maximize the utility of information generated
   by those tools can help organizations to build, operate, and maintain effective
-  monitoring programs. Related control: AU-6.'
+  monitoring programs.
 relatedControls:
   - AU-6
 parametersThatMustBeDefined: None
@@ -38360,7 +38307,7 @@ title: Integrated Situational Awareness
 definition: The organization correlates information from monitoring physical, cyber,
   and supply chain activities to achieve integrated, organization-wide situational
   awareness.
-additionalGuidance: 'This control enhancement correlates monitoring information from
+additionalGuidance: This control enhancement correlates monitoring information from
   a more diverse set of information sources to achieve integrated situational awareness.
   Integrated situational awareness from a combination of physical, cyber, and supply
   chain monitoring activities enhances the capability of organizations to more quickly
@@ -38368,7 +38315,7 @@ additionalGuidance: 'This control enhancement correlates monitoring information 
   to carry out such attacks. In contrast to SI-4 (x6) which correlates the various
   cyber monitoring information, this control enhancement correlates monitoring beyond
   just the cyber domain. Such monitoring may help reveal attacks on organizations
-  that are operating across multiple attack vectors. Related control: SA-12.'
+  that are operating across multiple attack vectors.
 relatedControls:
   - SI-4
   - SA-12
@@ -38733,13 +38680,12 @@ definition: '(A)The organization receives information system security alerts, ad
 
   (D)The organization implements security directives in accordance with established
   time frames, or notifies the issuing organization of the degree of non-compliance.'
-additionalGuidance: 'Compliance to security directives is essential due to the critical
+additionalGuidance: Compliance to security directives is essential due to the critical
   nature of many of these directives and the potential immediate adverse effects on
   organizational operations and assets, individuals, other organizations, and Canada
   should the directives not be implemented in a timely manner. External organizations
   include, for example, external mission/business partners, supply chain partners,
-  external service providers, and other peer/supporting organizations. Related control:
-  SI-2'
+  external service providers, and other peer/supporting organizations.
 relatedControls:
   - SI-2
 parametersThatMustBeDefined: '(A) External organizations
@@ -38912,7 +38858,7 @@ class: Operational
 title: Automation Support for Distributed Testing
 definition: The information system implements automated mechanisms to support for
   the management of distributed security testing.
-additionalGuidance: 'Related control: SI-2.'
+additionalGuidance: ''
 relatedControls:
   - SI-2
 parametersThatMustBeDefined: None
@@ -39132,7 +39078,7 @@ family: SI
 class: Operational
 title: Centrally-Managed Integrity Tools
 definition: The organization employs centrally managed integrity verification tools.
-additionalGuidance: 'Related controls: AU-3, SI-2, SI-8.'
+additionalGuidance: ''
 relatedControls:
   - AU-3
   - SI-2
@@ -39218,11 +39164,10 @@ class: Operational
 title: Cryptographic Protection
 definition: The information system implements cryptographic mechanisms to detect unauthorized
   changes to software, firmware, and information.
-additionalGuidance: 'Cryptographic mechanisms used for the protection of integrity
+additionalGuidance: Cryptographic mechanisms used for the protection of integrity
   include, for example, digital signatures and the computation and application of
   signed hashes using asymmetric cryptography, protecting the confidentiality of the
   key used to generate the hash, and using the public key to verify the hash information.
-  Related control: SC-13.'
 relatedControls:
   - SC-13
 parametersThatMustBeDefined: None
@@ -39573,14 +39518,14 @@ definition: '(a)The organization prohibits the use of binary or machine-executab
   (b)The organization provides exceptions to the source code requirement only for
   compelling mission/operational requirements and with the approval of the authorizing
   official.'
-additionalGuidance: 'This control enhancement applies to all sources of binary or
-  machine-executable code including, for example, commercial software/firmware and
-  open source software. Organizations assess software products without accompanying
-  source code from sources with limited or no warranty for potential security impacts.
-  The assessments address the fact that these types of software products may be very
-  difficult to review, repair, or extend, given that organizations, in most cases,
-  do not have access to the original source code, and there may be no owners who could
-  make such repairs on behalf of organizations. Related control: SA-5.'
+additionalGuidance: This control enhancement applies to all sources of binary or machine-executable
+  code including, for example, commercial software/firmware and open source software.
+  Organizations assess software products without accompanying source code from sources
+  with limited or no warranty for potential security impacts. The assessments address
+  the fact that these types of software products may be very difficult to review,
+  repair, or extend, given that organizations, in most cases, do not have access to
+  the original source code, and there may be no owners who could make such repairs
+  on behalf of organizations.
 relatedControls:
   - SA-5
 parametersThatMustBeDefined: None
@@ -39929,7 +39874,7 @@ definition: '(a)The information system provides a manual override capability for
   only [Assignment: organization-defined authorized individuals]; and
 
   (c)The information system audits the use of the manual override capability.'
-additionalGuidance: 'Related controls: CM-3, CM-5.'
+additionalGuidance: ''
 relatedControls:
   - CM-3
   - CM-5
