@@ -1,6 +1,8 @@
 .[] | select(.["ID"] != "") | {
-  id: .["ID"],
+  control: (.["ID"][:2] + "-" + .["ID"][2:]),
+  id: (.["ID"][2:] | sub("[-]"; "") | match("\\d+") | .string | tonumber),
   family: (.["ID"][:2]),
+  enhancement: (.["ID"][2:] | select(test("\\(")) | sub("\\d+\\("; "") | sub("\\)"; "" ) | tonumber),
   class: .["Class"],
   title: .["Title"],
   definition: .["Definition"],
