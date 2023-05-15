@@ -1,6 +1,6 @@
 .[] | select(.["ID"] != "") | {
   control: (.["ID"][:2] + "-" + .["ID"][2:]),
-  id: (.["ID"] | sub("^[A-Za-z]+"; "") |sub("[-]"; "")  | sub("(\\D+).*"; "a") | sub("(\\D+).*"; "") | tonumber),
+  id: (.["ID"][2:] | sub("[-]"; "") | match("\\d+") | .string | tonumber),
   family: (.["ID"][:2]),
   enhancement: (.["ID"][2:] | select(test("\\(")) | sub("\\d+\\("; "") | sub("\\)"; "" ) | tonumber),
   class: .["Class"],
